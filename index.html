@@ -17,12 +17,11 @@ body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1
 .wrap{max-width:1080px;margin:0 auto;padding:0 16px 88px}
 a{color:var(--accent);text-decoration:none}
 header{display:flex;align-items:center;gap:6px;flex-wrap:nowrap;position:sticky;top:0;z-index:50;margin:0 -16px 12px;padding:10px 16px;background:rgba(11,18,20,.86);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-.brand{display:flex;align-items:center;gap:8px;min-width:0}
-.qmark{width:36px;height:36px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:800;background:linear-gradient(135deg,#9b7dff,#6fe0c4);color:#04110a}
-.mark-35{font-weight:700;font-size:22px;letter-spacing:-.03em;background:linear-gradient(135deg,#d8fff4 0%,#6fe0c4 44%,#9b7dff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.header-right{display:flex;align-items:center;gap:6px;margin-left:auto;flex-wrap:nowrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.mark-35{font-weight:700;font-size:28px;letter-spacing:-.04em;line-height:1;background:linear-gradient(135deg,#d8fff4 0%,#6fe0c4 44%,#9b7dff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.header-right{display:flex;align-items:center;gap:6px;margin-left:auto}
 .lang-switch{display:flex;gap:3px}
-.lang-btn{background:transparent;border:1px solid var(--line);color:var(--muted);padding:5px 6px;border-radius:6px;font-size:10px;cursor:pointer}
+.lang-btn{background:transparent;border:1px solid var(--line);color:var(--muted);padding:5px 6px;border-radius:6px;font-size:10px;cursor:pointer;font-family:var(--sans)}
 .lang-btn.on{color:var(--ink);border-color:var(--accent)}
 .theme-wrap{position:relative}
 .theme-btn{display:flex;align-items:center;gap:6px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:6px 10px;font:600 11px var(--sans);cursor:pointer}
@@ -30,12 +29,17 @@ header{display:flex;align-items:center;gap:6px;flex-wrap:nowrap;position:sticky;
 .theme-panel{display:none;position:absolute;right:0;top:calc(100% + 8px);min-width:200px;background:#16181d;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:10px;z-index:80}
 .theme-wrap.open .theme-panel{display:block}
 .theme-panel p{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#8b93a0;margin:0 8px 8px}
-.theme-item{display:flex;align-items:center;gap:10px;width:100%;border:0;background:transparent;color:#e8eef2;padding:10px;border-radius:12px;font:600 14px var(--sans);cursor:pointer}
+.theme-item{display:flex;align-items:center;gap:10px;width:100%;border:0;background:transparent;color:#e8eef2;padding:10px;border-radius:12px;font:600 14px var(--sans);cursor:pointer;text-align:left}
 .theme-item.on{background:#14302c;color:#2ee6c7}
-.theme-item i{width:14px;height:14px;border-radius:50%}
+.theme-item i{width:14px;height:14px;border-radius:50%;display:block}
 .theme-item .ck{margin-left:auto;opacity:0}
 .theme-item.on .ck{opacity:1}
-.hero{padding:36px 0 10px}
+.house{margin:18px 0 8px;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#050505}
+.house img{display:block;width:100%;height:auto}
+.house figcaption{padding:16px 18px;border-top:1px solid var(--line)}
+.house .tag{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.house strong{display:block;font-family:var(--serif);font-size:22px;font-weight:400;margin:6px 0}
+.hero{padding:20px 0 10px}
 .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
 h1{font-family:var(--serif);font-size:clamp(36px,7vw,58px);font-weight:400;line-height:1.08;margin-bottom:16px}
 .lede{color:var(--muted);max-width:34em}
@@ -55,10 +59,7 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:v
 <body>
 <div class="wrap">
 <header>
-  <a class="brand" href="/">
-    <span class="qmark">Q</span>
-    <span class="mark-35">35</span>
-  </a>
+  <a class="brand" href="/"><span class="mark-35">35</span></a>
   <div class="header-right">
     <div class="lang-switch" id="langs">
       <button class="lang-btn on" data-lang="en">EN</button>
@@ -70,7 +71,10 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:v
     </div>
   </div>
 </header>
-
+<figure class="house">
+  <img alt="35 QUAY ElGhaly" src="brand-35-quay.jpg"/>
+  <figcaption><span class="tag">The house mark</span><strong>35 · QUAY · ElGhaly</strong></figcaption>
+</figure>
 <section class="hero">
   <p class="eyebrow">35 · QUAY · ElGhaly</p>
   <h1>The dock beside 35.</h1>
@@ -82,34 +86,12 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:v
     <a class="btn" href="mailto:35@elghaly.dev">35@elghaly.dev</a>
   </div>
 </section>
-
 <div class="grid">
-  <article class="card">
-    <h3>QUAY Land</h3>
-    <p>Weekly Jito landed / failed report for one bot. You send signatures. We do not hold keys.</p>
-    <div class="price">$149 / month</div>
-    <a class="btn primary" href="https://buy.stripe.com/4gM9ANffhbWRd2g4UR3Ru04">Pay with Stripe</a>
-  </article>
-  <article class="card">
-    <h3>Flex Card pack</h3>
-    <p>Desk proof cards in the 35 lockup.</p>
-    <div class="price">$29 one-time</div>
-    <a class="btn primary" href="https://buy.stripe.com/9B6bIV1orgd7e6kbjf3Ru05">Pay with Stripe</a>
-  </article>
-  <article class="card">
-    <h3>Score report</h3>
-    <p>Read-only token score. No auto-sell.</p>
-    <div class="price">$49 one-time</div>
-    <a class="btn primary" href="https://buy.stripe.com/fZu28l8QT9OJ4vKfzv3Ru06">Pay with Stripe</a>
-  </article>
-  <article class="card">
-    <h3>Node Watch</h3>
-    <p>Telegram ping when an RPC / gRPC feed dies.</p>
-    <div class="price">$79 / month</div>
-    <a class="btn primary" href="https://buy.stripe.com/14A4gt3wze4Z3rGevr3Ru07">Pay with Stripe</a>
-  </article>
+  <article class="card"><h3>QUAY Land</h3><p>Weekly Jito landed / failed report for one bot. You send signatures. We do not hold keys.</p><div class="price">$149 / month</div><a class="btn primary" href="https://buy.stripe.com/4gM9ANffhbWRd2g4UR3Ru04">Pay with Stripe</a></article>
+  <article class="card"><h3>Flex Card pack</h3><p>Desk proof cards in the 35 lockup.</p><div class="price">$29 one-time</div><a class="btn primary" href="https://buy.stripe.com/9B6bIV1orgd7e6kbjf3Ru05">Pay with Stripe</a></article>
+  <article class="card"><h3>Score report</h3><p>Read-only token score. No auto-sell.</p><div class="price">$49 one-time</div><a class="btn primary" href="https://buy.stripe.com/fZu28l8QT9OJ4vKfzv3Ru06">Pay with Stripe</a></article>
+  <article class="card"><h3>Node Watch</h3><p>Telegram ping when an RPC / gRPC feed dies.</p><div class="price">$79 / month</div><a class="btn primary" href="https://buy.stripe.com/14A4gt3wze4Z3rGevr3Ru07">Pay with Stripe</a></article>
 </div>
-
 <footer>
   <p>548 Market St, San Francisco, CA 94104</p>
   <p><a href="mailto:35@elghaly.dev">35@elghaly.dev</a> · <a href="mailto:support@elghaly.dev">support@elghaly.dev</a></p>
@@ -119,14 +101,7 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:v
 <script src="themes.js"></script>
 <script>
 (function(){
-  var map={
-    en:{h:'The dock beside 35.',l:'Same house as Plumb and IRIS. QUAY sells landing reports, proof cards, and node watch — not only arb.'},
-    ar:{h:'الرصيف بجانب 35.',l:'نفس البيت: تقارير هبوط، كروت، ومراقبة النود.'},
-    ru:{h:'Причал рядом с 35.',l:'Те же услуги для любого стола, не только arb.'},
-    zh:{h:'35 旁边的砌头。',l:'报告、卡片与节点监控，不限于奔利。'},
-    de:{h:'Der Steg neben 35.',l:'Reports, Karten, Node-Watch. Nicht nur Arb.'},
-    es:{h:'El muelle junto a 35.',l:'Informes, tarjetas y watch. No solo arb.'}
-  };
+  var map={en:{h:'The dock beside 35.',l:'Same house as Plumb and IRIS. QUAY sells landing reports, proof cards, and node watch — not only arb.'},ar:{h:'الرصيف بجانب 35.',l:'نفس البيت: تقارير هبوط، كروت، ومراقبة النود.'},ru:{h:'Причал рядом с 35.',l:'Те же услуги для любого стола, не только arb.'},zh:{h:'35 旁边的砌头。',l:'报告、卡片与节点监控，不限于奔利。'},de:{h:'Der Steg neben 35.',l:'Reports, Karten, Node-Watch. Nicht nur Arb.'},es:{h:'El muelle junto a 35.',l:'Informes, tarjetas y watch. No solo arb.'}};
   document.getElementById('langs').addEventListener('click',function(e){
     var b=e.target.closest('[data-lang]'); if(!b) return;
     var k=b.getAttribute('data-lang'); var t=map[k]; if(!t) return;
