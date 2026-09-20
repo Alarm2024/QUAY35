@@ -34,13 +34,12 @@ header{display:flex;align-items:center;gap:6px;flex-wrap:nowrap;position:sticky;
 .theme-item i{width:14px;height:14px;border-radius:50%;display:block}
 .theme-item .ck{margin-left:auto;opacity:0}
 .theme-item.on .ck{opacity:1}
-.house{margin:18px 0 8px;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:radial-gradient(circle at 12% 0%,rgba(155,125,255,.28),transparent 42%),radial-gradient(circle at 90% 100%,rgba(46,230,199,.18),transparent 40%),#050505;min-height:220px;display:flex;flex-direction:column;justify-content:center;padding:36px 28px}
-.house .big{font-size:clamp(72px,18vw,120px);font-weight:700;letter-spacing:-.06em;line-height:.9;background:linear-gradient(135deg,#d8fff4 0%,#6fe0c4 44%,#9b7dff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
-.house .q{margin-top:14px;letter-spacing:.42em;font-size:18px;font-weight:600}
-.house .e{margin-top:8px;letter-spacing:.32em;font-size:11px;color:var(--muted)}
-.house figcaption{padding:16px 0 0;border-top:1px solid var(--line);margin-top:28px}
-.house .tag{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
-.house strong{display:block;font-family:var(--serif);font-size:22px;font-weight:400;margin:6px 0}
+.house{margin:18px 0 8px;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:radial-gradient(circle at 12% 0%,rgba(155,125,255,.28),transparent 42%),radial-gradient(circle at 90% 100%,rgba(46,230,199,.18),transparent 40%),#050505;padding:32px 28px;display:grid;grid-template-columns:1fr 56px;gap:18px;align-items:center}
+.house .big{font-size:clamp(72px,16vw,112px);font-weight:700;letter-spacing:-.06em;line-height:.9;background:linear-gradient(135deg,#d8fff4 0%,#6fe0c4 44%,#9b7dff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.house .q{margin-top:10px;letter-spacing:.38em;font-size:22px;font-weight:600}
+.house .e{margin-top:8px;letter-spacing:.28em;font-size:11px;color:var(--muted)}
+.syms{display:flex;flex-direction:column;gap:16px;align-items:center;color:#d8dee6}
+.syms svg{width:28px;height:28px}
 .hero{padding:20px 0 10px}
 .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
 h1{font-family:var(--serif);font-size:clamp(36px,7vw,58px);font-weight:400;line-height:1.08;margin-bottom:16px}
@@ -53,8 +52,10 @@ h1{font-family:var(--serif);font-size:clamp(36px,7vw,58px);font-weight:400;line-
 @media(max-width:720px){.grid{grid-template-columns:1fr}}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px}
 .card h3{font-family:var(--serif);font-size:22px;font-weight:400;margin-bottom:8px}
-.card p{color:var(--muted);font-size:14px}
+.card p,.steps li{color:var(--muted);font-size:14px}
 .price{margin:12px 0;color:var(--accent)}
+.steps{margin:10px 0 0 18px}
+.steps li{margin:6px 0}
 footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
 </style>
 </head>
@@ -74,10 +75,16 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:v
   </div>
 </header>
 <figure class="house">
-  <div class="big">35</div>
-  <div class="q">QUAY</div>
-  <div class="e">ELGHALY</div>
-  <figcaption><span class="tag">The house mark</span><strong>35 · QUAY · ElGhaly</strong></figcaption>
+  <div>
+    <div class="big">35</div>
+    <div class="q">QUAY</div>
+    <div class="e">— ELGHALY —</div>
+  </div>
+  <div class="syms" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3c2 3 3 5 3 7a3 3 0 1 1-6 0c0-2 1-4 3-7z"/><path d="M8 14c0 3 1.5 6 4 7 2.5-1 4-4 4-7"/><circle cx="12" cy="10" r="1" fill="currentColor"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><ellipse cx="12" cy="12" rx="8" ry="5"/><circle cx="12" cy="12" r="2.2"/><path d="M12 4v1.5M12 18.5V20M4.5 8.5l1.2.7M18.3 14.8l1.2.7M4.5 15.5l1.2-.7M18.3 9.2l1.2-.7"/></svg>
+  </div>
 </figure>
 <section class="hero">
   <p class="eyebrow">35 · QUAY · ElGhaly</p>
@@ -96,6 +103,17 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:v
   <article class="card"><h3>Score report</h3><p>Read-only token score. No auto-sell.</p><div class="price">$49 one-time</div><a class="btn primary" href="https://buy.stripe.com/fZu28l8QT9OJ4vKfzv3Ru06">Pay with Stripe</a></article>
   <article class="card"><h3>Node Watch</h3><p>Telegram ping when an RPC / gRPC feed dies.</p><div class="price">$79 / month</div><a class="btn primary" href="https://buy.stripe.com/14A4gt3wze4Z3rGevr3Ru07">Pay with Stripe</a></article>
 </div>
+<section class="card" style="margin-top:18px">
+  <h3>After you pay</h3>
+  <ol class="steps">
+    <li>Stripe email arrives. Save the receipt.</li>
+    <li>Write support@elghaly.dev from the same email you paid with.</li>
+    <li>Land: send bot name + last 20 signatures (Solscan / Jito explorer).</li>
+    <li>Watch: send Telegram handle + RPC / gRPC URL.</li>
+    <li>Score / Flex: send mint address or the text for the card.</li>
+    <li>First file goes out within 48 hours. Weekly Land every Monday.</li>
+  </ol>
+</section>
 <footer>
   <p>548 Market St, San Francisco, CA 94104</p>
   <p><a href="mailto:35@elghaly.dev">35@elghaly.dev</a> · <a href="mailto:support@elghaly.dev">support@elghaly.dev</a></p>
