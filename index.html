@@ -42,8 +42,6 @@ h1{font-family:var(--serif);font-size:clamp(34px,6.6vw,54px);font-weight:400;lin
 .price{margin:10px 0;color:var(--accent);font-weight:600}
 .who{margin:10px 0 0 18px}
 .who li{margin:6px 0}
-.qbox{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:14px 0;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:#0e1615}
-.qbox strong{letter-spacing:.08em}
 .chain{padding:16px 0;border-top:1px solid var(--line)}
 .chain b{display:block;font-size:11px;letter-spacing:.16em;color:var(--accent);margin-bottom:8px}
 .addr-line{font-size:13px;word-break:break-all;margin-bottom:10px}
@@ -86,7 +84,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:v
 <section class="hero">
   <p class="eyebrow">35 · QUAY · ElGhaly</p>
   <h1>Reports a desk can sell. Not another empty chart.</h1>
-  <p class="lede">QUAY is the product door next to Plumb and IRIS. You buy a file, a card, or a watch — not a token, not a promise of land. We read public signatures and node health. We do not hold keys.</p>
+  <p class="lede">QUAY is the product door next to Plumb and IRIS. You buy a file, a card, or a watch — not a token. We do not hold keys.</p>
   <p class="addr">548 Market St, San Francisco, CA 94104</p>
   <div class="hero-meta">
     <a class="btn primary" href="#wallets">Pay from wallet</a>
@@ -95,46 +93,15 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:v
   </div>
 </section>
 <div class="grid">
-  <article class="card">
-    <h3>QUAY Land</h3>
-    <p>Weekly paper for one bot: landed vs failed, tip waste, and the signatures that actually made a block. You send last-week hashes. You keep the wallet.</p>
-    <div class="price">$149 / month</div>
-    <a class="btn primary" href="https://buy.stripe.com/4gM9ANffhbWRd2g4UR3Ru04">Stripe</a>
-  </article>
-  <article class="card">
-    <h3>Flex card pack</h3>
-    <p>Desk proof cards in the 35 lockup for X and Telegram. Text + numbers you send. No fake PnL from us.</p>
-    <div class="price">$29 one-time</div>
-    <a class="btn primary" href="https://buy.stripe.com/9B6bIV1orgd7e6kbjf3Ru05">Stripe</a>
-  </article>
-  <article class="card">
-    <h3>Score report</h3>
-    <p>Read-only mint note: freeze, mint auth, LP lock language we can see on-chain. Not a sell bot. Not a guarantee.</p>
-    <div class="price">$49 one-time</div>
-    <a class="btn primary" href="https://buy.stripe.com/fZu28l8QT9OJ4vKfzv3Ru06">Stripe</a>
-  </article>
-  <article class="card">
-    <h3>Node Watch</h3>
-    <p>Telegram ping when an RPC or gRPC feed you name goes quiet. One handle. One list of URLs.</p>
-    <div class="price">$79 / month</div>
-    <a class="btn primary" href="https://buy.stripe.com/14A4gt3wze4Z3rGevr3Ru07">Stripe</a>
-  </article>
+  <article class="card"><h3>QUAY Land</h3><p>Weekly paper for one bot: landed vs failed and tip waste. You send hashes. You keep the wallet.</p><div class="price">$149 / month</div><a class="btn primary" href="https://buy.stripe.com/4gM9ANffhbWRd2g4UR3Ru04">Stripe</a></article>
+  <article class="card"><h3>Flex card pack</h3><p>Desk proof cards in the 35 lockup. Text you send. No fake PnL from us.</p><div class="price">$29 one-time</div><a class="btn primary" href="https://buy.stripe.com/9B6bIV1orgd7e6kbjf3Ru05">Stripe</a></article>
+  <article class="card"><h3>Score report</h3><p>Read-only mint note. Not a sell bot.</p><div class="price">$49 one-time</div><a class="btn primary" href="https://buy.stripe.com/fZu28l8QT9OJ4vKfzv3Ru06">Stripe</a></article>
+  <article class="card"><h3>Node Watch</h3><p>Telegram ping when an RPC or gRPC feed goes quiet.</p><div class="price">$79 / month</div><a class="btn primary" href="https://buy.stripe.com/14A4gt3wze4Z3rGevr3Ru07">Stripe</a></article>
 </div>
-<section class="card" style="margin-top:18px">
-  <p class="k">Who it is for</p>
-  <h3>Desks that already trade. Buyers who want a file, not custody.</h3>
-  <ul class="who">
-    <li>Jito searchers who want a Monday land sheet they can read.</li>
-    <li>Operators who post proof cards without inventing the art each time.</li>
-    <li>Anyone checking a mint before they touch it — score is a note, not advice.</li>
-    <li>Bots that die when one RPC sleeps — Watch pings the handle you give.</li>
-  </ul>
-</section>
 <section class="card" id="wallets" style="margin-top:18px">
   <p class="k">Wallet send</p>
   <h3>Withdraw from your wallet to the desk</h3>
-  <p>Same prices as Stripe. Send the exact product amount. Put the Q-number in the memo if the chain allows it. Then mail the hash + Q-number to 35@elghaly.dev.</p>
-  <div class="qbox"><span>Your Q-number</span><strong id="qnum">Q—</strong><button class="btn" type="button" id="copyq">Copy Q</button></div>
+  <p>Same prices as Stripe. Send the product amount, then mail the hash to 35@elghaly.dev.</p>
   <div class="chain"><b>SOLANA</b><div class="addr-line">4vsXfhPXgwmP2cDdypGf9QrmdpMUhxCxRJ5aDDPxfsYo</div><div class="row"><button class="btn" type="button" data-copy="4vsXfhPXgwmP2cDdypGf9QrmdpMUhxCxRJ5aDDPxfsYo" data-label="Copy SOL">Copy SOL</button><a class="btn" href="https://solscan.io/account/4vsXfhPXgwmP2cDdypGf9QrmdpMUhxCxRJ5aDDPxfsYo" target="_blank" rel="noopener">Solscan</a></div></div>
   <div class="chain"><b>ETH · ETHEREUM</b><div class="addr-line">0x379F62A4EFFDAE688c5963B44667501f481CFE6D</div><div class="row"><button class="btn" type="button" data-copy="0x379F62A4EFFDAE688c5963B44667501f481CFE6D" data-label="Copy ETH">Copy ETH</button><a class="btn" href="https://etherscan.io/address/0x379F62A4EFFDAE688c5963B44667501f481CFE6D" target="_blank" rel="noopener">Etherscan</a></div></div>
   <div class="chain"><b>BTC · BITCOIN</b><div class="addr-line">bc1qgtc26k0vuu8j3uhpvpsevgladug5n6en4jzm00</div><div class="row"><button class="btn" type="button" data-copy="bc1qgtc26k0vuu8j3uhpvpsevgladug5n6en4jzm00" data-label="Copy BTC">Copy BTC</button><a class="btn" href="https://mempool.space/address/bc1qgtc26k0vuu8j3uhpvpsevgladug5n6en4jzm00" target="_blank" rel="noopener">Mempool</a></div></div>
@@ -143,24 +110,18 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:v
 <footer>
   <p>548 Market St, San Francisco, CA 94104</p>
   <p><a href="mailto:35@elghaly.dev">35@elghaly.dev</a> · <a href="mailto:support@elghaly.dev">support@elghaly.dev</a></p>
-  <p>Software and reports only. Not financial advice. Not a guaranteed return. Stripe payouts land on home8alone10@gmail.com.</p>
 </footer>
 </div>
 <script src="themes.js"></script>
 <script>
+document.addEventListener('click',function(e){
+  var b=e.target.closest('[data-copy]'); if(!b) return;
+  navigator.clipboard&&navigator.clipboard.writeText(b.getAttribute('data-copy'));
+  var lab=b.getAttribute('data-label'); b.textContent='Copied';
+  setTimeout(function(){b.textContent=lab;},900);
+});
 (function(){
-  var n='Q-'+new Date().toISOString().slice(0,10).replace(/-/g,'')+'-'+Math.floor(1000+Math.random()*9000);
-  var el=document.getElementById('qnum'); el.textContent=n;
-  document.getElementById('copyq').onclick=function(){navigator.clipboard&&navigator.clipboard.writeText(n); this.textContent='Copied';};
-  document.addEventListener('click',function(e){
-    var b=e.target.closest('[data-copy]'); if(!b) return;
-    navigator.clipboard&&navigator.clipboard.writeText(b.getAttribute('data-copy'));
-    var lab=b.getAttribute('data-label'); b.textContent='Copied';
-    setTimeout(function(){b.textContent=lab;},900);
-  });
-})();
-(function(){
-  var map={en:{h:'Reports a desk can sell. Not another empty chart.',l:'QUAY is the product door next to Plumb and IRIS. You buy a file, a card, or a watch — not a token.'},ar:{h:'تقارير يمكن بيعها المكتب.',l:'ملف أو كارت أو مراقبة. مش توكن.'},ru:{h:'Отчёты, которые можно продавать.',l:'Файл, карта или watch. Не токен.'},zh:{h:'能卖的报告，不是空图。',l:'买文件、卡或监控，不是代币。'},de:{h:'Reports, die ein Desk verkaufen kann.',l:'Datei, Karte oder Watch. Kein Token.'},es:{h:'Informes que un desk puede vender.',l:'Archivo, tarjeta o watch. No un token.'}};
+  var map={en:{h:'Reports a desk can sell. Not another empty chart.',l:'You buy a file, a card, or a watch — not a token.'},ar:{h:'تقارير للمكتب.',l:'ملف أو كارت. مش توكن.'},ru:{h:'Отчёты для стола.',l:'Файл или карта. Не токен.'},zh:{h:'能卖的报告.',l:'文件或卡，不是代币。'},de:{h:'Reports für den Desk.',l:'Datei oder Karte. Kein Token.'},es:{h:'Informes para el desk.',l:'Archivo o tarjeta. No un token.'}};
   document.getElementById('langs').addEventListener('click',function(e){
     var b=e.target.closest('[data-lang]'); if(!b) return;
     var k=b.getAttribute('data-lang'); var t=map[k]; if(!t) return;
