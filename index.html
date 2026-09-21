@@ -8,33 +8,37 @@
 <link rel="canonical" href="https://quay-35.elghaly.dev/"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
 <style>
 :root{--bg:#0b1214;--ink:#e8fbf6;--muted:#9ab3ad;--accent:#2ee6c7;--surface:#121a19;--line:rgba(46,230,199,.22);--serif:"Instrument Serif",Georgia,serif;--sans:"Inter",ui-sans-serif,system-ui,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.6;min-height:100vh}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.55;min-height:100vh}
 .wrap{max-width:1080px;margin:0 auto;padding:0 16px 88px}
 a{color:var(--accent);text-decoration:none}
-header{display:flex;align-items:center;gap:6px;flex-wrap:nowrap;position:sticky;top:0;z-index:50;margin:0 -16px 12px;padding:10px 16px;background:rgba(11,18,20,.86);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+header{display:flex;align-items:center;gap:8px;position:sticky;top:0;z-index:50;margin:0 -16px 12px;padding:10px 16px;background:rgba(11,18,20,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 .brand{display:flex;align-items:baseline;gap:8px;text-decoration:none}
-.grad{font-weight:700;line-height:1;background:linear-gradient(135deg,#d8fff4 0%,#6fe0c4 44%,#9b7dff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
-.mark-35{font-size:26px;letter-spacing:-.04em}
-.mark-quay{font-size:14px;letter-spacing:.2em}
+.grad{font-weight:700;background:linear-gradient(135deg,#e8fff8 0%,#6fe0c4 42%,#9b7dff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.mark-35{font-size:26px;letter-spacing:-.05em}
+.mark-quay{font-size:13px;letter-spacing:.22em}
 .header-right{display:flex;align-items:center;gap:6px;margin-left:auto}
 .lang-switch{display:flex;gap:3px}
-.lang-btn{background:transparent;border:1px solid var(--line);color:var(--muted);padding:5px 6px;border-radius:6px;font-size:10px;cursor:pointer;font-family:var(--sans)}
+.lang-btn{background:transparent;border:1px solid var(--line);color:var(--muted);padding:5px 6px;border-radius:6px;font-size:10px;cursor:pointer}
 .lang-btn.on{color:var(--ink);border-color:var(--accent)}
-.house{margin:18px 0 8px;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#050505}
-.house img{display:block;width:100%;height:auto}
-.hero{padding:20px 0 10px}
-.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
-h1{font-family:var(--serif);font-size:clamp(36px,7vw,58px);font-weight:400;line-height:1.08;margin-bottom:16px}
+.house{margin:16px 0;border-radius:22px;overflow:hidden;border:1px solid var(--line);min-height:240px;padding:28px 24px;display:grid;grid-template-columns:1fr 52px;gap:12px;align-items:center;background:radial-gradient(circle at 8% -10%,rgba(140,80,255,.35),transparent 42%),radial-gradient(circle at 100% 110%,rgba(20,180,160,.22),transparent 40%),#050508}
+.house .big{font-size:clamp(84px,22vw,128px);font-weight:700;letter-spacing:-.07em;line-height:.86;background:linear-gradient(160deg,#f4fffb 0%,#7eebd4 38%,#8a7cff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.house .q{margin-top:8px;font-size:clamp(22px,6vw,34px);font-weight:700;letter-spacing:.18em;color:#fff}
+.house .e{margin-top:8px;font-size:11px;letter-spacing:.34em;color:#c9cdd4}
+.syms{display:flex;flex-direction:column;gap:18px;align-items:center;color:#dce3ea}
+.syms svg{width:30px;height:30px}
+.hero{padding:12px 0 8px}
+.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+h1{font-family:var(--serif);font-size:clamp(36px,7vw,56px);font-weight:400;line-height:1.08;margin-bottom:14px}
 .lede{color:var(--muted);max-width:34em}
 .addr{margin-top:16px}
-.hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
 .btn{display:inline-block;padding:12px 18px;border-radius:999px;font-size:13px;border:1px solid var(--line);color:var(--ink)}
-.btn.primary{background:var(--accent);color:#04110a;border-color:transparent;font-weight:600}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}
+.btn.primary{background:var(--accent);color:#04110a;border:0;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:26px}
 @media(max-width:720px){.grid{grid-template-columns:1fr}}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px}
 .card h3{font-family:var(--serif);font-size:22px;font-weight:400;margin-bottom:8px}
@@ -73,7 +77,18 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:v
     </div>
   </div>
 </header>
-<figure class="house"><img id="card" alt="35 QUAY ElGhaly"/></figure>
+<figure class="house">
+  <div>
+    <div class="big">35</div>
+    <div class="q">QUAY</div>
+    <div class="e">— ELGHALY —</div>
+  </div>
+  <div class="syms" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15"><path d="M12 2l1.2 8.2L22 12l-8.8 1.8L12 22l-1.2-8.2L2 12l8.8-1.8z"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15"><path d="M12 3c1.8 2.8 3 5.2 3 7.2a3 3 0 1 1-6 0C9 8.2 10.2 5.8 12 3z"/><path d="M8.2 14.2c.4 2.6 1.8 5.2 3.8 6.3 2-1.1 3.4-3.7 3.8-6.3"/><path d="M10.2 10.2c.4.8 1.1 1.3 1.8 1.3s1.4-.5 1.8-1.3"/><circle cx="12" cy="9.4" r=".7" fill="currentColor"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15"><path d="M3 12s3.6-6 9-6 9 6 9 6-3.6 6-9 6-9-6-9-6z"/><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="12" r=".7" fill="#2ee6c7" stroke="none"/><path d="M12 4.2v1.4M12 18.4v1.4M6.2 6.8l1 .9M16.8 16.3l1 .9M6.2 17.2l1-.9M16.8 7.7l1-.9"/></svg>
+  </div>
+</figure>
 <section class="hero">
   <p class="eyebrow">35 · QUAY · ElGhaly</p>
   <h1>The dock beside 35.</h1>
@@ -91,17 +106,6 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:v
   <article class="card"><h3>Score report</h3><p>Read-only token score. No auto-sell.</p><div class="price">$49 one-time</div><a class="btn primary" href="https://buy.stripe.com/fZu28l8QT9OJ4vKfzv3Ru06">Pay with Stripe</a></article>
   <article class="card"><h3>Node Watch</h3><p>Telegram ping when an RPC / gRPC feed dies.</p><div class="price">$79 / month</div><a class="btn primary" href="https://buy.stripe.com/14A4gt3wze4Z3rGevr3Ru07">Pay with Stripe</a></article>
 </div>
-<section class="card" style="margin-top:18px">
-  <h3>After you pay</h3>
-  <ol class="steps">
-    <li>Stripe email arrives. Save the receipt.</li>
-    <li>Write support@elghaly.dev from the same email you paid with.</li>
-    <li>Land: bot name + last 20 signatures.</li>
-    <li>Watch: Telegram + RPC / gRPC URL.</li>
-    <li>Score / Flex: mint or card text.</li>
-    <li>First file within 48 hours. Land every Monday.</li>
-  </ol>
-</section>
 <footer>
   <p>548 Market St, San Francisco, CA 94104</p>
   <p><a href="mailto:35@elghaly.dev">35@elghaly.dev</a> · <a href="mailto:support@elghaly.dev">support@elghaly.dev</a></p>
@@ -109,11 +113,9 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:v
 </footer>
 </div>
 <script src="themes.js"></script>
-<script src="card.js"></script>
 <script>
-document.getElementById('card').src=window.QUAY_CARD||'';
 (function(){
-  var map={en:{h:'The dock beside 35.',l:'Same house as Plumb and IRIS. QUAY sells landing reports, proof cards, and node watch — not only arb.'},ar:{h:'الرصيف بجانب 35.',l:'نفس البيت: تقارير هبوط، كروت، ومراقبة النود.'},ru:{h:'Причал рядом с 35.',l:'Те же услуги для любого стола, не только arb.'},zh:{h:'35 旁边的砌头。',l:'报告、卡片与节点监控，不限于奔利。'},de:{h:'Der Steg neben 35.',l:'Reports, Karten, Node-Watch. Nicht nur Arb.'},es:{h:'El muelle junto a 35.',l:'Informes, tarjetas y watch. No solo arb.'}};
+  var map={en:{h:'The dock beside 35.',l:'Same house as Plumb and IRIS. QUAY sells landing reports, proof cards, and node watch — not only arb.'},ar:{h:'الرصيف بجانب 35.',l:'نفس البيت.'},ru:{h:'Причал рядом с 35.',l:'Те же услуги, не только arb.'},zh:{h:'35 旁边的砌头。',l:'报告与监控，不限于奔利。'},de:{h:'Der Steg neben 35.',l:'Reports und Watch. Nicht nur Arb.'},es:{h:'El muelle junto a 35.',l:'Informes y watch. No solo arb.'}};
   document.getElementById('langs').addEventListener('click',function(e){
     var b=e.target.closest('[data-lang]'); if(!b) return;
     var k=b.getAttribute('data-lang'); var t=map[k]; if(!t) return;
