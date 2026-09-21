@@ -1,0 +1,13 @@
+From: support@elghaly.dev
+Subject: QUAY start — send these 4 lines
+
+1. Product you paid
+2. Stripe receipt email
+3. What we need (see below)
+4. Telegram @ if you want Watch
+
+Need by product:
+- Land: bot name + last 20 signatures (Solscan or Jito explorer links)
+- Watch: Telegram @ + RPC URL + gRPC URL
+- Score: mint address
+- Flex: words for the card (max 12)
