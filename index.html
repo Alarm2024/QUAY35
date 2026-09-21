@@ -6,7 +6,6 @@
 <title>QUAY — 35 ElGhaly</title>
 <meta name="theme-color" content="#0b1214"/>
 <link rel="canonical" href="https://quay-35.elghaly.dev/"/>
-<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
@@ -17,29 +16,16 @@ body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1
 .wrap{max-width:1080px;margin:0 auto;padding:0 16px 88px}
 a{color:var(--accent);text-decoration:none}
 header{display:flex;align-items:center;gap:6px;flex-wrap:nowrap;position:sticky;top:0;z-index:50;margin:0 -16px 12px;padding:10px 16px;background:rgba(11,18,20,.86);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-.mark-35{font-weight:700;font-size:28px;letter-spacing:-.04em;line-height:1;background:linear-gradient(135deg,#d8fff4 0%,#6fe0c4 44%,#9b7dff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.brand{display:flex;align-items:baseline;gap:8px;text-decoration:none}
+.grad{font-weight:700;line-height:1;background:linear-gradient(135deg,#d8fff4 0%,#6fe0c4 44%,#9b7dff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.mark-35{font-size:26px;letter-spacing:-.04em}
+.mark-quay{font-size:14px;letter-spacing:.2em}
 .header-right{display:flex;align-items:center;gap:6px;margin-left:auto}
 .lang-switch{display:flex;gap:3px}
 .lang-btn{background:transparent;border:1px solid var(--line);color:var(--muted);padding:5px 6px;border-radius:6px;font-size:10px;cursor:pointer;font-family:var(--sans)}
 .lang-btn.on{color:var(--ink);border-color:var(--accent)}
-.theme-wrap{position:relative}
-.theme-btn{display:flex;align-items:center;gap:6px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:6px 10px;font:600 11px var(--sans);cursor:pointer}
-.theme-dot{width:10px;height:10px;border-radius:50%;background:#2ee6c7}
-.theme-panel{display:none;position:absolute;right:0;top:calc(100% + 8px);min-width:200px;background:#16181d;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:10px;z-index:80}
-.theme-wrap.open .theme-panel{display:block}
-.theme-panel p{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#8b93a0;margin:0 8px 8px}
-.theme-item{display:flex;align-items:center;gap:10px;width:100%;border:0;background:transparent;color:#e8eef2;padding:10px;border-radius:12px;font:600 14px var(--sans);cursor:pointer;text-align:left}
-.theme-item.on{background:#14302c;color:#2ee6c7}
-.theme-item i{width:14px;height:14px;border-radius:50%;display:block}
-.theme-item .ck{margin-left:auto;opacity:0}
-.theme-item.on .ck{opacity:1}
-.house{margin:18px 0 8px;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:radial-gradient(circle at 12% 0%,rgba(155,125,255,.28),transparent 42%),radial-gradient(circle at 90% 100%,rgba(46,230,199,.18),transparent 40%),#050505;padding:32px 28px;display:grid;grid-template-columns:1fr 56px;gap:18px;align-items:center}
-.house .big{font-size:clamp(72px,16vw,112px);font-weight:700;letter-spacing:-.06em;line-height:.9;background:linear-gradient(135deg,#d8fff4 0%,#6fe0c4 44%,#9b7dff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
-.house .q{margin-top:10px;letter-spacing:.38em;font-size:22px;font-weight:600}
-.house .e{margin-top:8px;letter-spacing:.28em;font-size:11px;color:var(--muted)}
-.syms{display:flex;flex-direction:column;gap:16px;align-items:center;color:#d8dee6}
-.syms svg{width:28px;height:28px}
+.house{margin:18px 0 8px;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#050505}
+.house img{display:block;width:100%;height:auto}
 .hero{padding:20px 0 10px}
 .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
 h1{font-family:var(--serif);font-size:clamp(36px,7vw,58px);font-weight:400;line-height:1.08;margin-bottom:16px}
@@ -55,14 +41,27 @@ h1{font-family:var(--serif);font-size:clamp(36px,7vw,58px);font-weight:400;line-
 .card p,.steps li{color:var(--muted);font-size:14px}
 .price{margin:12px 0;color:var(--accent)}
 .steps{margin:10px 0 0 18px}
-.steps li{margin:6px 0}
 footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+.theme-wrap{position:relative}
+.theme-btn{display:flex;align-items:center;gap:6px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:6px 10px;font:600 11px var(--sans);cursor:pointer}
+.theme-dot{width:10px;height:10px;border-radius:50%;background:#2ee6c7}
+.theme-panel{display:none;position:absolute;right:0;top:calc(100% + 8px);min-width:200px;background:#16181d;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:10px;z-index:80}
+.theme-wrap.open .theme-panel{display:block}
+.theme-panel p{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#8b93a0;margin:0 8px 8px}
+.theme-item{display:flex;align-items:center;gap:10px;width:100%;border:0;background:transparent;color:#e8eef2;padding:10px;border-radius:12px;font:600 14px var(--sans);cursor:pointer;text-align:left}
+.theme-item.on{background:#14302c;color:#2ee6c7}
+.theme-item i{width:14px;height:14px;border-radius:50%;display:block}
+.theme-item .ck{margin-left:auto;opacity:0}
+.theme-item.on .ck{opacity:1}
 </style>
 </head>
 <body>
 <div class="wrap">
 <header>
-  <a class="brand" href="/"><span class="mark-35">35</span></a>
+  <a class="brand" href="/">
+    <span class="grad mark-35">35</span>
+    <span class="grad mark-quay">QUAY</span>
+  </a>
   <div class="header-right">
     <div class="lang-switch" id="langs">
       <button class="lang-btn on" data-lang="en">EN</button>
@@ -74,18 +73,7 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:v
     </div>
   </div>
 </header>
-<figure class="house">
-  <div>
-    <div class="big">35</div>
-    <div class="q">QUAY</div>
-    <div class="e">— ELGHALY —</div>
-  </div>
-  <div class="syms" aria-hidden="true">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/></svg>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3c2 3 3 5 3 7a3 3 0 1 1-6 0c0-2 1-4 3-7z"/><path d="M8 14c0 3 1.5 6 4 7 2.5-1 4-4 4-7"/><circle cx="12" cy="10" r="1" fill="currentColor"/></svg>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><ellipse cx="12" cy="12" rx="8" ry="5"/><circle cx="12" cy="12" r="2.2"/><path d="M12 4v1.5M12 18.5V20M4.5 8.5l1.2.7M18.3 14.8l1.2.7M4.5 15.5l1.2-.7M18.3 9.2l1.2-.7"/></svg>
-  </div>
-</figure>
+<figure class="house"><img id="card" alt="35 QUAY ElGhaly"/></figure>
 <section class="hero">
   <p class="eyebrow">35 · QUAY · ElGhaly</p>
   <h1>The dock beside 35.</h1>
@@ -108,10 +96,10 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:v
   <ol class="steps">
     <li>Stripe email arrives. Save the receipt.</li>
     <li>Write support@elghaly.dev from the same email you paid with.</li>
-    <li>Land: send bot name + last 20 signatures (Solscan / Jito explorer).</li>
-    <li>Watch: send Telegram handle + RPC / gRPC URL.</li>
-    <li>Score / Flex: send mint address or the text for the card.</li>
-    <li>First file goes out within 48 hours. Weekly Land every Monday.</li>
+    <li>Land: bot name + last 20 signatures.</li>
+    <li>Watch: Telegram + RPC / gRPC URL.</li>
+    <li>Score / Flex: mint or card text.</li>
+    <li>First file within 48 hours. Land every Monday.</li>
   </ol>
 </section>
 <footer>
@@ -121,7 +109,9 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:v
 </footer>
 </div>
 <script src="themes.js"></script>
+<script src="card.js"></script>
 <script>
+document.getElementById('card').src=window.QUAY_CARD||'';
 (function(){
   var map={en:{h:'The dock beside 35.',l:'Same house as Plumb and IRIS. QUAY sells landing reports, proof cards, and node watch — not only arb.'},ar:{h:'الرصيف بجانب 35.',l:'نفس البيت: تقارير هبوط، كروت، ومراقبة النود.'},ru:{h:'Причал рядом с 35.',l:'Те же услуги для любого стола, не только arb.'},zh:{h:'35 旁边的砌头。',l:'报告、卡片与节点监控，不限于奔利。'},de:{h:'Der Steg neben 35.',l:'Reports, Karten, Node-Watch. Nicht nur Arb.'},es:{h:'El muelle junto a 35.',l:'Informes, tarjetas y watch. No solo arb.'}};
   document.getElementById('langs').addEventListener('click',function(e){
