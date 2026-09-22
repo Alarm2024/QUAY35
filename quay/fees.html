@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="midnight">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Fee review — QUAY · 35 ElGhaly</title>
+<meta name="description" content="48-hour priority-fee and tip configuration review from public transaction signatures. $199 once."/>
+<meta name="theme-color" content="#07090b"/>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#07090b;--ink:#e8fbf6;--muted:#9ab3ad;--accent:#2ee6c7;--surface:#0f1418;--line:rgba(46,230,199,.22);--serif:"Instrument Serif",Georgia,serif;--sans:"Inter",ui-sans-serif,system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.55;min-height:100vh}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px 88px}
+a{color:var(--accent);text-decoration:none}
+header{display:flex;align-items:center;gap:8px;position:sticky;top:0;z-index:50;margin:0 -16px 12px;padding:10px 16px;background:rgba(7,9,11,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink)}
+.qmark{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;font:700 16px var(--sans);color:#04110a;background:var(--accent)}
+.mark-35{font-size:24px;font-weight:700;color:var(--ink)}
+.mark-quay{font-size:15px;letter-spacing:.22em;font-weight:700;color:var(--accent)}
+.header-right{margin-left:auto;display:flex;align-items:center;gap:6px}
+.back{font-size:12px;color:var(--muted);border:1px solid var(--line);padding:5px 10px;border-radius:6px}
+.back:hover{color:var(--ink);border-color:var(--accent)}
+.hero{padding:28px 0 8px}
+.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+h1{font-family:var(--serif);font-size:clamp(30px,5.8vw,48px);font-weight:400;line-height:1.1;margin-bottom:14px}
+h2{font-family:var(--serif);font-size:22px;font-weight:400;margin:0 0 12px}
+.lede{color:var(--muted);font-size:15px;max-width:62ch}
+.lede+.lede{margin-top:10px}
+.section{margin-top:36px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:720px){.grid{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px}
+.card h3{font-family:var(--serif);font-size:20px;font-weight:400;margin:0 0 12px}
+.card p,.card li{font-size:14px;color:var(--muted)}
+.card ul{margin:0 0 0 18px}
+.card li{margin:8px 0}
+.card li strong{color:var(--ink);font-weight:600}
+.note{font-size:13px;color:var(--muted);margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.warn{margin-top:36px;padding:22px;border:1px solid var(--line);border-radius:18px;background:rgba(46,230,199,.04)}
+.warn h2{color:var(--ink)}
+.warn p,.warn li{font-size:14px;color:var(--muted)}
+.warn ul{margin:10px 0 0 18px}
+.warn li{margin:6px 0}
+.rule{margin-top:14px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;font-size:13px;color:var(--ink);background:rgba(7,9,11,.6)}
+.sample{margin-top:36px}
+.sample-banner{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.report-sheet{border:1px solid var(--line);border-radius:18px;background:var(--surface);padding:24px;font-size:13px;color:var(--muted)}
+.report-sheet h3{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--ink);margin:0 0 16px}
+.report-row{display:grid;grid-template-columns:1fr 1fr;gap:12px 24px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.report-row:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.report-row.single{grid-template-columns:1fr}
+.report-row dt{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.report-row dd{color:var(--ink);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
+.redacted{color:var(--muted);font-style:italic;font-family:var(--sans)}
+.price-block{margin-top:36px;padding:28px;border:1px solid var(--line);border-radius:18px;background:var(--surface)}
+.price-block .price{font-size:28px;font-family:var(--serif);color:var(--accent);margin:8px 0 6px}
+.price-block .price-note{font-size:14px;color:var(--muted);margin-bottom:18px}
+.price-block p{font-size:14px;color:var(--muted);margin-bottom:12px}
+.disclaimer{font-size:13px;color:var(--muted);margin-top:14px;line-height:1.6}
+.btn{display:inline-block;padding:11px 16px;border-radius:999px;font-size:13px;border:1px solid var(--line);color:var(--ink);background:transparent;cursor:pointer;font-family:var(--sans);text-decoration:none}
+.btn.primary{background:var(--accent);color:#04110a;border:0;font-weight:600}
+.btn:hover{opacity:.92}
+footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer p{margin:6px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="brand" href="../">
+    <span class="qmark">Q</span>
+    <span class="mark-35">35</span>
+    <span class="mark-quay">QUAY</span>
+  </a>
+  <div class="header-right">
+    <a class="back" href="../">All products</a>
+  </div>
+</header>
+
+<section class="hero">
+  <p class="eyebrow">QUAY · Fee review</p>
+  <h1>Priority-fee and tip configuration review</h1>
+  <p class="lede">We read your public transaction signatures and compare your current priority-fee and tip settings against what those transactions actually paid and landed at.</p>
+  <p class="lede">You receive one written page within 48 hours of a complete brief. This is a recommendation only — we do not change your config, your wallet, or your transactions.</p>
+</section>
+
+<section class="section">
+  <div class="grid">
+    <article class="card">
+      <h3>What you send</h3>
+      <p>All of this is public data. Send nothing that is not already visible on chain or in a block explorer.</p>
+      <ul>
+        <li><strong>Up to 200 transaction signatures</strong> — signatures only. Never a private key, never a seed phrase, never an RPC URL with a token in it.</li>
+        <li><strong>Your current priority-fee setting</strong></li>
+        <li><strong>Your current tip setting</strong></li>
+        <li><strong>Which venue or aggregator you route through</strong></li>
+      </ul>
+      <p class="note">We will not ask for, display, or accept an API key, an RPC URL containing a token, or a private key.</p>
+    </article>
+    <article class="card">
+      <h3>What you get back</h3>
+      <p>One page, delivered within 48 hours of a complete brief:</p>
+      <ul>
+        <li>The percentile your current setting actually lands at</li>
+        <li>The percentile to target, with the reasoning shown</li>
+        <li>When to raise, and the specific condition that should trigger it</li>
+        <li>Where you are overpaying, with the wasted amount per landed tx</li>
+        <li>What we could not determine from the signatures, named explicitly</li>
+      </ul>
+      <p class="note">If an input cannot be read from a signature, the report says <strong>UNKNOWN</strong> — not a guess.</p>
+    </article>
+  </div>
+</section>
+
+<section class="warn">
+  <h2>What we cannot tell you from signatures alone</h2>
+  <p>Signatures show what was submitted and what landed on chain. They do not show everything about your operation. At minimum, we cannot see:</p>
+  <ul>
+    <li><strong>Your fills</strong> — whether a landed transaction achieved the trade outcome you wanted</li>
+    <li><strong>Your strategy</strong> — intent, sizing logic, or timing rules behind each send</li>
+    <li><strong>Your RPC latency</strong> — how long your node or provider took to propagate the transaction</li>
+    <li><strong>Why a specific transaction failed</strong> if the failure is not recorded on chain (simulation rejections, dropped packets, client-side aborts)</li>
+  </ul>
+  <p class="rule">Anything that cannot be derived from the signatures you send is marked <strong>UNKNOWN</strong> in the report. We do not infer or fill gaps.</p>
+</section>
+
+<section class="sample">
+  <p class="sample-banner">Example layout — not a real client report</p>
+  <div class="report-sheet">
+    <h3>Fee review · one-page output (redacted shape)</h3>
+    <div class="report-row">
+      <div>
+        <dt>Sample scope</dt>
+        <dd><span class="redacted">[venue name]</span> · <span class="redacted">[N signatures reviewed]</span></dd>
+      </div>
+      <div>
+        <dt>Settings as submitted</dt>
+        <dd>Priority: <span class="redacted">[your value]</span> · Tip: <span class="redacted">[your value]</span></dd>
+      </div>
+    </div>
+    <div class="report-row">
+      <div>
+        <dt>Current setting — landed percentile</dt>
+        <dd><span class="redacted">[percentile band + short note]</span></dd>
+      </div>
+      <div>
+        <dt>Recommended target percentile</dt>
+        <dd><span class="redacted">[target band + reasoning inline]</span></dd>
+      </div>
+    </div>
+    <div class="report-row single">
+      <div>
+        <dt>When to raise</dt>
+        <dd><span class="redacted">[specific condition that should trigger a raise — e.g. queue depth, failure class, time window]</span></dd>
+      </div>
+    </div>
+    <div class="report-row single">
+      <div>
+        <dt>Overpaying</dt>
+        <dd><span class="redacted">[venue or route]</span> · <span class="redacted">[wasted amount per landed tx, where measurable]</span></dd>
+      </div>
+    </div>
+    <div class="report-row single">
+      <div>
+        <dt>Could not determine (UNKNOWN)</dt>
+        <dd><span class="redacted">[each gap named — e.g. fill outcome, RPC latency, off-chain failure reason]</span></dd>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="price-block">
+  <h2>Price and intake</h2>
+  <p class="price">$199</p>
+  <p class="price-note">Once · English only · Invoice on reply</p>
+  <p>Email a complete brief to start. No form on this page collects anything. Payment is invoiced after we confirm your brief — not through a checkout button here.</p>
+  <a class="btn primary" href="mailto:35@elghaly.dev?subject=QUAY%20fee%20review&amp;body=QUAY%20fee%20review%20%E2%80%94%20complete%20brief%0A%0A1.%20Transaction%20signatures%20(up%20to%20200%2C%20signatures%20only%3A%20no%20keys%2C%20no%20seed%20phrases%2C%20no%20RPC%20URLs%20with%20tokens)%0A%0A%5Bpaste%20signatures%20or%20explorer%20links%5D%0A%0A2.%20Current%20priority-fee%20setting%3A%0A%0A3.%20Current%20tip%20setting%3A%0A%0A4.%20Venue%20or%20aggregator%20you%20route%20through%3A%0A">Send brief — 35@elghaly.dev</a>
+  <p class="disclaimer">This is a written recommendation based on public chain data. We do not touch your config, your wallet, or your transactions. We do not guarantee that following the recommendation improves landing rate or reduces cost. No profit claim, no returns claim, no projected savings.</p>
+</section>
+
+<footer>
+  <p><a href="mailto:35@elghaly.dev">35@elghaly.dev</a> · <a href="mailto:support@elghaly.dev">support@elghaly.dev</a></p>
+  <p>AI-assisted analysis of public on-chain data.</p>
+</footer>
+</div>
+</body>
+</html>
