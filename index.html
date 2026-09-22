@@ -31,7 +31,7 @@ header{display:flex;align-items:center;gap:8px;position:sticky;top:0;z-index:50;
 .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
 h1{font-family:var(--serif);font-size:clamp(34px,6.6vw,54px);font-weight:400;line-height:1.08;margin-bottom:12px}
 .lede,.card p,.who li{color:var(--muted);font-size:14px}
-.addr{margin-top:14px}
+.park{font-size:14px;color:var(--muted);margin:12px 0 0}
 .hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
 .btn{display:inline-block;padding:11px 16px;border-radius:999px;font-size:13px;border:1px solid var(--line);color:var(--ink);background:transparent;cursor:pointer;font-family:var(--sans)}
 .btn.primary{background:var(--accent);color:#04110a;border:0;font-weight:600}
@@ -40,13 +40,21 @@ h1{font-family:var(--serif);font-size:clamp(34px,6.6vw,54px);font-weight:400;lin
 .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px}
 .card h3{font-family:var(--serif);font-size:22px;font-weight:400;margin:0 0 8px}
 .price{margin:10px 0;color:var(--accent);font-weight:600}
+.recourse{font-size:14px;color:var(--muted);margin-top:18px}
+.terms{margin-top:18px;padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--surface)}
+.terms h2{font-family:var(--serif);font-size:20px;font-weight:400;margin:0 0 10px}
+.terms p{font-size:14px;color:var(--muted)}
 .who{margin:10px 0 0 18px}
 .who li{margin:6px 0}
+.irreversible{font-size:15px;color:var(--ink);margin:0 0 16px;line-height:1.5}
+.network-warn{font-size:14px;color:var(--ink);margin:0 0 16px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:rgba(46,230,199,.06)}
 .chain{padding:16px 0;border-top:1px solid var(--line)}
+.chain:first-of-type{border-top:0;padding-top:0}
 .chain b{display:block;font-size:11px;letter-spacing:.16em;color:var(--accent);margin-bottom:8px}
 .addr-line{font-size:13px;word-break:break-all;margin-bottom:10px}
 .row{display:flex;flex-wrap:wrap;gap:8px}
 .k{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.pay-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
 footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
 .theme-wrap{position:relative}
 .theme-btn{display:flex;align-items:center;gap:6px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:6px 10px;font:600 11px var(--sans);cursor:pointer}
@@ -84,32 +92,44 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:v
 <section class="hero">
   <p class="eyebrow">35 · QUAY · ElGhaly</p>
   <h1>Reports a desk can sell. Not another empty chart.</h1>
+  <p class="park">QUAY opens after Plumb's proof pages land.</p>
   <p class="lede">QUAY is the product door next to Plumb and IRIS. You buy a file, a card, or a watch — not a token. We do not hold keys.</p>
-  <p class="addr">548 Market St, San Francisco, CA 94104</p>
   <div class="hero-meta">
-    <a class="btn primary" href="#wallets">Pay from wallet</a>
-    <a class="btn" href="https://buy.stripe.com/4gM9ANffhbWRd2g4UR3Ru04">Stripe Land $149</a>
-    <a class="btn" href="mailto:35@elghaly.dev">35@elghaly.dev</a>
+    <a class="btn" href="mailto:support@elghaly.dev">support@elghaly.dev</a>
   </div>
 </section>
 <div class="grid">
-  <article class="card"><h3>QUAY Land</h3><p>Weekly paper for one bot: landed vs failed and tip waste. You send hashes. You keep the wallet.</p><div class="price">$149 / month</div><a class="btn primary" href="https://buy.stripe.com/4gM9ANffhbWRd2g4UR3Ru04">Stripe</a></article>
-  <article class="card"><h3>Flex card pack</h3><p>Desk proof cards in the 35 lockup. Text you send. No fake PnL from us.</p><div class="price">$29 one-time</div><a class="btn primary" href="https://buy.stripe.com/9B6bIV1orgd7e6kbjf3Ru05">Stripe</a></article>
-  <article class="card"><h3>Score report</h3><p>Read-only mint note. Not a sell bot.</p><div class="price">$49 one-time</div><a class="btn primary" href="https://buy.stripe.com/fZu28l8QT9OJ4vKfzv3Ru06">Stripe</a></article>
-  <article class="card"><h3>Node Watch</h3><p>Telegram ping when an RPC or gRPC feed goes quiet.</p><div class="price">$79 / month</div><a class="btn primary" href="https://buy.stripe.com/14A4gt3wze4Z3rGevr3Ru07">Stripe</a></article>
+  <article class="card"><h3>QUAY Land</h3><p>Weekly paper for one bot: landed vs failed and tip waste. You send hashes. You keep the wallet.</p><div class="price">$149 / month</div></article>
+  <article class="card"><h3>Flex card pack</h3><p>Desk proof cards in the 35 lockup. Text you send. No fake PnL from us.</p><div class="price">$29 one-time</div></article>
+  <article class="card"><h3>Score report</h3><p>Read-only mint note. Not a sell bot.</p><div class="price">$49 one-time</div></article>
+  <article class="card"><h3>Node Watch</h3><p>Telegram ping when an RPC or gRPC feed goes quiet.</p><div class="price">$79 / month</div></article>
 </div>
+<p class="recourse">Card payments run through Stripe and can be disputed through your card issuer. A wallet transfer cannot. Same product, different recourse.</p>
+<section class="terms">
+  <h2>Terms</h2>
+  <p>Same prices as Stripe. Send the product amount, then mail the hash to <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>.</p>
+</section>
 <section class="card" id="wallets" style="margin-top:18px">
   <p class="k">Wallet send</p>
   <h3>Withdraw from your wallet to the desk</h3>
-  <p>Same prices as Stripe. Send the product amount, then mail the hash to 35@elghaly.dev.</p>
-  <div class="chain"><b>SOLANA</b><div class="addr-line">4vsXfhPXgwmP2cDdypGf9QrmdpMUhxCxRJ5aDDPxfsYo</div><div class="row"><button class="btn" type="button" data-copy="4vsXfhPXgwmP2cDdypGf9QrmdpMUhxCxRJ5aDDPxfsYo" data-label="Copy SOL">Copy SOL</button><a class="btn" href="https://solscan.io/account/4vsXfhPXgwmP2cDdypGf9QrmdpMUhxCxRJ5aDDPxfsYo" target="_blank" rel="noopener">Solscan</a></div></div>
-  <div class="chain"><b>ETH · ETHEREUM</b><div class="addr-line">0x379F62A4EFFDAE688c5963B44667501f481CFE6D</div><div class="row"><button class="btn" type="button" data-copy="0x379F62A4EFFDAE688c5963B44667501f481CFE6D" data-label="Copy ETH">Copy ETH</button><a class="btn" href="https://etherscan.io/address/0x379F62A4EFFDAE688c5963B44667501f481CFE6D" target="_blank" rel="noopener">Etherscan</a></div></div>
-  <div class="chain"><b>BTC · BITCOIN</b><div class="addr-line">bc1qgtc26k0vuu8j3uhpvpsevgladug5n6en4jzm00</div><div class="row"><button class="btn" type="button" data-copy="bc1qgtc26k0vuu8j3uhpvpsevgladug5n6en4jzm00" data-label="Copy BTC">Copy BTC</button><a class="btn" href="https://mempool.space/address/bc1qgtc26k0vuu8j3uhpvpsevgladug5n6en4jzm00" target="_blank" rel="noopener">Mempool</a></div></div>
-  <div class="chain"><b>BASE</b><div class="addr-line">0x379F62A4EFFDAE688c5963B44667501f481CFE6D</div><div class="row"><button class="btn" type="button" data-copy="0x379F62A4EFFDAE688c5963B44667501f481CFE6D" data-label="Copy Base">Copy Base</button><a class="btn" href="https://basescan.org/address/0x379F62A4EFFDAE688c5963B44667501f481CFE6D" target="_blank" rel="noopener">Basescan</a></div></div>
+  <p>Same prices as Stripe. Send the product amount, then mail the hash to <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>.</p>
+  <p class="irreversible">A wallet transfer cannot be reversed. There is no chargeback. Read what you are buying before you send.</p>
+  <p class="network-warn">ETH and Base use the same address format. Sending on the wrong network loses the funds and cannot be recovered.</p>
+  <div class="chain"><div class="addr-line"><b>SOL · Solana</b> — 4vsXfhPXgwmP2cDdypGf9QrmdpMUhxCxRJ5aDDPxfsYo</div><div class="row"><button class="btn" type="button" data-copy="4vsXfhPXgwmP2cDdypGf9QrmdpMUhxCxRJ5aDDPxfsYo" data-label="Copy SOL">Copy SOL</button><a class="btn" href="https://solscan.io/account/4vsXfhPXgwmP2cDdypGf9QrmdpMUhxCxRJ5aDDPxfsYo" target="_blank" rel="noopener">Solscan</a></div></div>
+  <div class="chain"><div class="addr-line"><b>ETH · Ethereum</b> — 0x379F62A4EFFDAE688c5963B44667501f481CFE6D</div><div class="row"><button class="btn" type="button" data-copy="0x379F62A4EFFDAE688c5963B44667501f481CFE6D" data-label="Copy ETH">Copy ETH</button><a class="btn" href="https://etherscan.io/address/0x379F62A4EFFDAE688c5963B44667501f481CFE6D" target="_blank" rel="noopener">Etherscan</a></div></div>
+  <div class="chain"><div class="addr-line"><b>BTC · Bitcoin</b> — bc1qgtc26k0vuu8j3uhpvpsevgladug5n6en4jzm00</div><div class="row"><button class="btn" type="button" data-copy="bc1qgtc26k0vuu8j3uhpvpsevgladug5n6en4jzm00" data-label="Copy BTC">Copy BTC</button><a class="btn" href="https://mempool.space/address/bc1qgtc26k0vuu8j3uhpvpsevgladug5n6en4jzm00" target="_blank" rel="noopener">Mempool</a></div></div>
+  <div class="chain"><div class="addr-line"><b>BASE · Base</b> — 0x379F62A4EFFDAE688c5963B44667501f481CFE6D</div><div class="row"><button class="btn" type="button" data-copy="0x379F62A4EFFDAE688c5963B44667501f481CFE6D" data-label="Copy Base">Copy Base</button><a class="btn" href="https://basescan.org/address/0x379F62A4EFFDAE688c5963B44667501f481CFE6D" target="_blank" rel="noopener">Basescan</a></div></div>
+  <div class="pay-actions">
+    <a class="btn primary" href="#wallets">Pay from wallet</a>
+    <a class="btn primary" href="https://buy.stripe.com/4gM9ANffhbWRd2g4UR3Ru04">Stripe Land $149</a>
+    <a class="btn" href="https://buy.stripe.com/9B6bIV1orgd7e6kbjf3Ru05">Stripe · Flex $29</a>
+    <a class="btn" href="https://buy.stripe.com/fZu28l8QT9OJ4vKfzv3Ru06">Stripe · Score $49</a>
+    <a class="btn" href="https://buy.stripe.com/14A4gt3wze4Z3rGevr3Ru07">Stripe · Watch $79</a>
+  </div>
 </section>
 <footer>
-  <p>548 Market St, San Francisco, CA 94104</p>
-  <p><a href="mailto:35@elghaly.dev">35@elghaly.dev</a> · <a href="mailto:support@elghaly.dev">support@elghaly.dev</a></p>
+  <p><a href="mailto:support@elghaly.dev">support@elghaly.dev</a></p>
+  <p>AI-assisted analysis of public pages.</p>
 </footer>
 </div>
 <script src="themes.js"></script>
