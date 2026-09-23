@@ -16,12 +16,18 @@ Match **email + amount**:
 
 | Amount   | Product        |
 |----------|------------------|
+| $199     | Fee review (once) |
 | $149/mo  | QUAY Land (one bot) |
 | $29      | Flex Card pack   |
 | $49      | Score report     |
 | $79/mo   | Node Watch       |
 
 If no payment, **do not start work**.
+
+The fee review is **invoice on reply**, not a checkout button — the brief
+arrives by email first and you invoice after confirming it is complete. So
+for that one, STEP 1 happens before the payment lands. Do not deliver the
+page until it has.
 
 ---
 
@@ -44,6 +50,7 @@ Send from: **support@elghaly.dev**
 
 | Product | What to ask for |
 |---------|-----------------|
+| **Fee review** | Up to 200 transaction signatures (signatures only), current priority-fee setting, current tip setting, venue or aggregator they route through |
 | **Land** | Bot name + last 20 signatures (Solscan or Jito explorer links) |
 | **Watch** | Telegram @ + RPC URL + gRPC URL |
 | **Score** | Mint address |
@@ -54,6 +61,32 @@ Copy-paste template: [`templates/intake-email.txt`](templates/intake-email.txt)
 ---
 
 ## STEP 2 — deliver
+
+### Fee review (within 48h of a complete brief)
+
+Clock starts when the brief is **complete**, not when it arrives. If a field
+is missing, ask for it and say the 48 hours starts on the reply.
+
+One written page. Five things, in this order:
+
+- The percentile their current setting actually lands at.
+- The percentile to target, **with the reasoning shown**.
+- When to raise, and the specific condition that should trigger it.
+- Where they are overpaying, with the wasted amount per landed tx.
+- What could not be determined from the signatures, **named explicitly**.
+
+Anything not derivable from the signatures is written **UNKNOWN**. Not a
+guess, not an estimate, not an inference. The page says so itself.
+
+Say clearly: **this is a recommendation only.** We do not change their
+config, their wallet, or their transactions.
+
+Four things we cannot see and must not imply we can: their fills, their
+strategy, their RPC latency, and why a transaction failed when the failure
+is not recorded on chain.
+
+**Never** accept or display an API key, an RPC URL containing a token, or a
+private key. If one arrives in the brief, tell them, and do not keep it.
 
 ### Land (every Monday)
 
@@ -94,7 +127,7 @@ Reply only from **support@elghaly.dev**.
 
 Customer mails **35@elghaly.dev** and says they want a refund. No form, no reason, no time limit.
 
-Covers all QUAY products — Land, Flex, Score, Node Watch. Before work starts or after delivery.
+Covers all QUAY products — fee review, Land, Flex, Score, Node Watch. Before work starts or after delivery.
 
 | Payment | Action |
 |---------|--------|
