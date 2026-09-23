@@ -90,6 +90,27 @@ Reply only from **support@elghaly.dev**.
 
 ---
 
+## Refunds
+
+Customer mails **35@elghaly.dev** and says they want a refund. No form, no reason, no time limit.
+
+Covers all QUAY products — Land, Flex, Score, Node Watch. Before work starts or after delivery.
+
+| Payment | Action |
+|---------|--------|
+| **Stripe** | Refund in Stripe Dashboard → same card, 5–10 business days |
+| **Wallet** | Send back to the sending address, same asset and network, within 3 business days, minus network fee |
+
+**Wallet rules:**
+
+- Refund only to the address the payment came from.
+- Customer must have sent from an address they control — **cannot** refund an exchange deposit address.
+- Confirm tx hash and amount before sending.
+
+We would rather return money than keep money someone does not want us to have.
+
+---
+
 ## Refuse
 
 If they ask you to:
