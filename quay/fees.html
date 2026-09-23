@@ -60,6 +60,10 @@ h2{font-family:var(--serif);font-size:22px;font-weight:400;margin:0 0 12px}
 .price-block .price{font-size:28px;font-family:var(--serif);color:var(--accent);margin:8px 0 6px}
 .price-block .price-note{font-size:14px;color:var(--muted);margin-bottom:18px}
 .price-block p{font-size:14px;color:var(--muted);margin-bottom:12px}
+.refunds-block{margin-top:18px;padding:28px;border:1px solid var(--line);border-radius:18px;background:var(--surface)}
+.refunds-block h2{font-family:var(--serif);font-size:22px;font-weight:400;margin:0 0 12px}
+.refunds-block p{font-size:14px;color:var(--muted);margin:0 0 12px}
+.refunds-block p:last-child{margin-bottom:0}
 .disclaimer{font-size:13px;color:var(--muted);margin-top:14px;line-height:1.6}
 .btn{display:inline-block;padding:11px 16px;border-radius:999px;font-size:13px;border:1px solid var(--line);color:var(--ink);background:transparent;cursor:pointer;font-family:var(--sans);text-decoration:none}
 .btn.primary{background:var(--accent);color:#04110a;border:0;font-weight:600}
@@ -71,13 +75,13 @@ footer p{margin:6px 0}
 <body>
 <div class="wrap">
 <header>
-  <a class="brand" href="../">
+  <a class="brand" href="../index.html">
     <span class="qmark">Q</span>
     <span class="mark-35">35</span>
     <span class="mark-quay">QUAY</span>
   </a>
   <div class="header-right">
-    <a class="back" href="../">All products</a>
+    <a class="back" href="../index.html">All products</a>
   </div>
 </header>
 
@@ -180,6 +184,17 @@ footer p{margin:6px 0}
   <p>Email a complete brief to start. No form on this page collects anything. Payment is invoiced after we confirm your brief — not through a checkout button here.</p>
   <a class="btn primary" href="mailto:35@elghaly.dev?subject=QUAY%20fee%20review&amp;body=QUAY%20fee%20review%20%E2%80%94%20complete%20brief%0A%0A1.%20Transaction%20signatures%20(up%20to%20200%2C%20signatures%20only%3A%20no%20keys%2C%20no%20seed%20phrases%2C%20no%20RPC%20URLs%20with%20tokens)%0A%0A%5Bpaste%20signatures%20or%20explorer%20links%5D%0A%0A2.%20Current%20priority-fee%20setting%3A%0A%0A3.%20Current%20tip%20setting%3A%0A%0A4.%20Venue%20or%20aggregator%20you%20route%20through%3A%0A">Send brief — 35@elghaly.dev</a>
   <p class="disclaimer">This is a written recommendation based on public chain data. We do not touch your config, your wallet, or your transactions. We do not guarantee that following the recommendation improves landing rate or reduces cost. No profit claim, no returns claim, no projected savings.</p>
+</section>
+
+<section class="refunds-block" id="refunds">
+  <h2>Refunds</h2>
+  <p>If you want your money back, you get it.</p>
+  <p>No form, no reason, no time limit, no exceptions. Mail <a href="mailto:35@elghaly.dev">35@elghaly.dev</a> and say you want a refund.</p>
+  <p>This covers everything QUAY sells — the fee review, Land reports, proof cards, Node Watch. Before we start, after we deliver, either way.</p>
+  <p><strong>Card through Stripe</strong> — back to the same card, 5–10 business days.</p>
+  <p><strong>Wallet</strong> — back to the address it came from, same asset, same network, within 3 business days, minus the network fee. Send from an address you control; we cannot refund an exchange deposit address.</p>
+  <p>We would rather return money than keep money someone does not want us to have.</p>
+  <p><a href="../index.html#where">Where we are</a></p>
 </section>
 
 <footer>
