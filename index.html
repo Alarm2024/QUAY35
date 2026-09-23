@@ -41,9 +41,12 @@ h1{font-family:var(--serif);font-size:clamp(34px,6.6vw,54px);font-weight:400;lin
 .card h3{font-family:var(--serif);font-size:22px;font-weight:400;margin:0 0 8px}
 .price{margin:10px 0;color:var(--accent);font-weight:600}
 .recourse{font-size:14px;color:var(--muted);margin-top:18px}
-.terms{margin-top:18px;padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--surface)}
-.terms h2{font-family:var(--serif);font-size:20px;font-weight:400;margin:0 0 10px}
-.terms p{font-size:14px;color:var(--muted)}
+.terms,.where{margin-top:18px;padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--surface)}
+.terms h2,.where h2{font-family:var(--serif);font-size:20px;font-weight:400;margin:0 0 10px}
+.terms p,.where p{font-size:14px;color:var(--muted);margin:0 0 12px}
+.where p:last-child{margin-bottom:0}
+.where-list{margin:12px 0 12px 18px}
+.where-list li{font-size:14px;color:var(--muted);margin:8px 0}
 .who{margin:10px 0 0 18px}
 .who li{margin:6px 0}
 .irreversible{font-size:15px;color:var(--ink);margin:0 0 16px;line-height:1.5}
@@ -108,6 +111,29 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:v
 <section class="terms">
   <h2>Terms</h2>
   <p>Same prices as Stripe. Send the product amount, then mail the hash to <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>.</p>
+</section>
+<section class="where" id="where">
+  <h2>Where we are</h2>
+  <p>548 Market Street, San Francisco is a mail address we hold. Post reaches us there. There is no office at that address, no company registered there, and nobody works there.</p>
+  <p>QUAY is a remote desk. There is no counter to walk into — not in San Francisco, not anywhere else. We are not going to print a building we do not sit in.</p>
+  <p>We say this because an address above a payment button reads like somewhere you could go if something went wrong. It is not that, and you should hear it from us rather than work it out afterwards.</p>
+  <p>So hold us to the things you can actually test:</p>
+  <ul class="where-list">
+    <li>Every claim on this site is marked verifiable, our word, or not a claim. Check the verifiable ones before you send anything.</li>
+    <li>Refunds are unconditional. Ask and the money goes back. That is the cheapest way to find out whether we keep our word.</li>
+    <li>Start with the smallest thing we sell. $199 buys a written review with nothing of yours at risk — no keys, no wallet, no access to anything. If we are not who we say we are, you find out for $199 and a reply.</li>
+  </ul>
+  <p>If you need a supplier with a registered company and a court where you can bring a claim, we are not that. Buy the small thing first, or do not buy.</p>
+</section>
+<section class="terms" id="refunds">
+  <h2>Refunds</h2>
+  <p>If you want your money back, you get it.</p>
+  <p>No form, no reason, no time limit, no exceptions. Mail <a href="mailto:35@elghaly.dev">35@elghaly.dev</a> and say you want a refund.</p>
+  <p>This covers everything QUAY sells — the fee review, Land reports, proof cards, Node Watch. Before we start, after we deliver, either way.</p>
+  <p><strong>Card through Stripe</strong> — back to the same card, 5–10 business days.</p>
+  <p><strong>Wallet</strong> — back to the address it came from, same asset, same network, within 3 business days, minus the network fee. Send from an address you control; we cannot refund an exchange deposit address.</p>
+  <p>We would rather return money than keep money someone does not want us to have.</p>
+  <p><a href="#where">Where we are</a></p>
 </section>
 <section class="card" id="wallets" style="margin-top:18px">
   <p class="k">Wallet send</p>
