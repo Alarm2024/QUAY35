@@ -15,6 +15,10 @@
 body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.55;min-height:100vh}
 .wrap{max-width:1080px;margin:0 auto;padding:0 16px 88px}
 a{color:var(--accent);text-decoration:none}
+/* Links inside running text are underlined, as on elghaly.dev: by colour
+   alone they were too close to the words around them (axe link-in-text-block). */
+p a:not(.btn),li a:not(.btn){text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:currentColor;text-decoration-color:color-mix(in srgb,currentColor 55%,transparent)}
+p a:not(.btn):hover,li a:not(.btn):hover,p a:not(.btn):focus-visible,li a:not(.btn):focus-visible{text-decoration-color:currentColor}
 header{display:flex;align-items:center;gap:8px;position:sticky;top:0;z-index:50;margin:0 -16px 12px;padding:10px 16px;background:rgba(11,18,20,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 .brand{display:flex;align-items:center;gap:8px;text-decoration:none}
 .qmark{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;font:700 16px var(--sans);color:#04110a;background:linear-gradient(135deg,#7ee8d4,#8a7cff)}
@@ -72,6 +76,14 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:v
 .theme-item .ck{margin-left:auto;opacity:0}
 .theme-item.on .ck{opacity:1}
 </style>
+  <meta name="description" content="Desk reports for Solana bots: a weekly landed-vs-failed paper, proof cards, a read-only mint score and RPC watch pings. Refunds with no form and no time limit.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="QUAY">
+  <meta property="og:url" content="https://quay-35.elghaly.dev/">
+  <meta property="og:title" content="QUAY — 35 ElGhaly">
+  <meta property="og:description" content="Desk reports for Solana bots: a weekly landed-vs-failed paper, proof cards, a read-only mint score and RPC watch pings. Refunds with no form and no time limit.">
+  <meta name="twitter:card" content="summary">
 </head>
 <body>
 <div class="wrap">
@@ -92,7 +104,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:v
     </div>
   </div>
 </header>
-<figure class="house"><img src="IMG_6895.jpeg" alt="35 QUAY ElGhaly"/></figure>
+<figure class="house"><img width="1168" height="784" src="IMG_6895.jpeg" alt="35 QUAY ElGhaly"/></figure>
 <section class="hero">
   <p class="eyebrow">35 · QUAY · ElGhaly</p>
   <h1>Reports a desk can sell. Not another empty chart.</h1>

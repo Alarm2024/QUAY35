@@ -16,6 +16,10 @@
 body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.55;min-height:100vh}
 .wrap{max-width:1080px;margin:0 auto;padding:0 16px 88px}
 a{color:var(--accent);text-decoration:none}
+/* Links inside running text are underlined, as on elghaly.dev: by colour
+   alone they were too close to the words around them (axe link-in-text-block). */
+p a:not(.btn),li a:not(.btn){text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:currentColor;text-decoration-color:color-mix(in srgb,currentColor 55%,transparent)}
+p a:not(.btn):hover,li a:not(.btn):hover,p a:not(.btn):focus-visible,li a:not(.btn):focus-visible{text-decoration-color:currentColor}
 header{display:flex;align-items:center;gap:8px;position:sticky;top:0;z-index:50;margin:0 -16px 12px;padding:10px 16px;background:rgba(7,9,11,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 .brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink)}
 .qmark{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;font:700 16px var(--sans);color:#04110a;background:var(--accent)}
