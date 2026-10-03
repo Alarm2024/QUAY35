@@ -40,6 +40,7 @@ h1{font-family:var(--serif);font-size:clamp(34px,6.6vw,54px);font-weight:400;lin
 .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px}
 .card h3{font-family:var(--serif);font-size:22px;font-weight:400;margin:0 0 8px}
 .price{margin:10px 0;color:var(--accent);font-weight:600}
+.grid .btn{margin-top:6px}
 .recourse{font-size:14px;color:var(--muted);margin-top:18px}
 .terms,.where{margin-top:18px;padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--surface)}
 .terms h2,.where h2{font-family:var(--serif);font-size:20px;font-weight:400;margin:0 0 10px}
@@ -101,15 +102,15 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:v
   </div>
 </section>
 <div class="grid">
-  <article class="card"><h3>QUAY Land</h3><p>Weekly paper for one bot: landed vs failed and tip waste. You send hashes. You keep the wallet.</p><div class="price">$149 / month</div></article>
-  <article class="card"><h3>Flex card pack</h3><p>Desk proof cards in the 35 lockup. Text you send. No fake PnL from us.</p><div class="price">$29 one-time</div></article>
-  <article class="card"><h3>Score report</h3><p>Read-only mint note. Not a sell bot.</p><div class="price">$49 one-time</div></article>
-  <article class="card"><h3>Node Watch</h3><p>Telegram ping when an RPC or gRPC feed goes quiet.</p><div class="price">$79 / month</div></article>
+  <article class="card"><h3>QUAY Land</h3><p>Weekly paper for one bot: landed vs failed and tip waste. You send hashes. You keep the wallet.</p><div class="price">$149 / month</div><a class="btn primary" href="https://quay-shop.elghaly.dev/products/quay-land" data-product="quay-land" aria-label="Buy — pay with PayPal: QUAY Land, $149 / month">Buy — pay with PayPal</a></article>
+  <article class="card"><h3>Flex card pack</h3><p>Desk proof cards in the 35 lockup. Text you send. No fake PnL from us.</p><div class="price">$29 one-time</div><a class="btn primary" href="https://quay-shop.elghaly.dev/products/flex-card-pack" data-product="flex-card-pack" aria-label="Buy — pay with PayPal: Flex card pack, $29 one-time">Buy — pay with PayPal</a></article>
+  <article class="card"><h3>Score report</h3><p>Read-only mint note. Not a sell bot.</p><div class="price">$49 one-time</div><a class="btn primary" href="https://quay-shop.elghaly.dev/products/score-report" data-product="score-report" aria-label="Buy — pay with PayPal: Score report, $49 one-time">Buy — pay with PayPal</a></article>
+  <article class="card"><h3>Node Watch</h3><p>Telegram ping when an RPC or gRPC feed goes quiet.</p><div class="price">$79 / month</div><a class="btn primary" href="https://quay-shop.elghaly.dev/products/node-watch" data-product="node-watch" aria-label="Buy — pay with PayPal: Node Watch, $79 / month">Buy — pay with PayPal</a></article>
 </div>
-<p class="recourse">Card payments run through Stripe and can be disputed through your card issuer. A wallet transfer cannot. Same product, different recourse.</p>
+<p class="recourse">Payments through the shop checkout can be disputed through PayPal or your card issuer. A wallet transfer cannot. Same product, different recourse.</p>
 <section class="terms">
   <h2>Terms</h2>
-  <p>Same prices as Stripe. Send the product amount, then mail the hash to <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>.</p>
+  <p>Same prices as the shop. Send the product amount, then mail the hash to <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>.</p>
 </section>
 <section class="where" id="where">
   <h2>Where we are</h2>
@@ -127,7 +128,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:v
   <p>If you want your money back, you get it.</p>
   <p>No form, no reason, no time limit, no exceptions. Mail <a href="mailto:35@elghaly.dev">35@elghaly.dev</a> and say you want a refund.</p>
   <p>This covers everything QUAY sells — the fee review, Land reports, proof cards, Node Watch. Before we start, after we deliver, either way.</p>
-  <p><strong>Card through Stripe</strong> — back to the same card, 5–10 business days.</p>
+  <p><strong>Paid through the shop checkout</strong> — back to the same card or PayPal account, 5–10 business days.</p>
   <p><strong>Wallet</strong> — back to the address it came from, same asset, same network, within 3 business days, minus the network fee. Send from an address you control; we cannot refund an exchange deposit address.</p>
   <p>We would rather return money than keep money someone does not want us to have.</p>
   <p><a href="#where">Where we are</a></p>
@@ -135,7 +136,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:v
 <section class="card" id="wallets" style="margin-top:18px">
   <p class="k">Wallet send</p>
   <h3>Withdraw from your wallet to the desk</h3>
-  <p>Same prices as Stripe. Send the product amount, then mail the hash to <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>.</p>
+  <p>Same prices as the shop. Send the product amount, then mail the hash to <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>.</p>
   <p class="irreversible">A wallet transfer cannot be reversed. There is no chargeback. Read what you are buying before you send.</p>
   <p class="network-warn">ETH and Base use the same address format. Sending on the wrong network loses the funds and cannot be recovered.</p>
   <div class="chain"><div class="addr-line"><b>SOL · Solana</b> — 4vsXfhPXgwmP2cDdypGf9QrmdpMUhxCxRJ5aDDPxfsYo</div><div class="row"><button class="btn" type="button" data-copy="4vsXfhPXgwmP2cDdypGf9QrmdpMUhxCxRJ5aDDPxfsYo" data-label="Copy SOL">Copy SOL</button><a class="btn" href="https://solscan.io/account/4vsXfhPXgwmP2cDdypGf9QrmdpMUhxCxRJ5aDDPxfsYo" target="_blank" rel="noopener">Solscan</a></div></div>
@@ -144,10 +145,6 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:v
   <div class="chain"><div class="addr-line"><b>BASE · Base</b> — 0x379F62A4EFFDAE688c5963B44667501f481CFE6D</div><div class="row"><button class="btn" type="button" data-copy="0x379F62A4EFFDAE688c5963B44667501f481CFE6D" data-label="Copy Base">Copy Base</button><a class="btn" href="https://basescan.org/address/0x379F62A4EFFDAE688c5963B44667501f481CFE6D" target="_blank" rel="noopener">Basescan</a></div></div>
   <div class="pay-actions">
     <a class="btn primary" href="#wallets">Pay from wallet</a>
-    <a class="btn primary" href="https://buy.stripe.com/4gM9ANffhbWRd2g4UR3Ru04">Stripe Land $149</a>
-    <a class="btn" href="https://buy.stripe.com/9B6bIV1orgd7e6kbjf3Ru05">Stripe · Flex $29</a>
-    <a class="btn" href="https://buy.stripe.com/fZu28l8QT9OJ4vKfzv3Ru06">Stripe · Score $49</a>
-    <a class="btn" href="https://buy.stripe.com/14A4gt3wze4Z3rGevr3Ru07">Stripe · Watch $79</a>
   </div>
 </section>
 <footer>
@@ -156,6 +153,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:v
 </footer>
 </div>
 <script src="themes.js"></script>
+<script src="pay.js"></script>
 <script>
 document.addEventListener('click',function(e){
   var b=e.target.closest('[data-copy]'); if(!b) return;

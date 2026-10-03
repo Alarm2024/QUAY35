@@ -1,0 +1,23 @@
+/* QUAY checkout. The product buttons go to the PayPal shop (quay-shop.elghaly.dev).
+   Stripe stays wired but switched off: set STRIPE_ENABLED to true to send the
+   buttons back to these Stripe links. */
+(function () {
+  'use strict';
+  var STRIPE_ENABLED = false;
+  var STRIPE_PAY = {
+    'quay-land': ['https://buy.stripe.com/4gM9ANffhbWRd2g4UR3Ru04', 'Stripe Land $149'],
+    'flex-card-pack': ['https://buy.stripe.com/9B6bIV1orgd7e6kbjf3Ru05', 'Stripe · Flex $29'],
+    'score-report': ['https://buy.stripe.com/fZu28l8QT9OJ4vKfzv3Ru06', 'Stripe · Score $49'],
+    'node-watch': ['https://buy.stripe.com/14A4gt3wze4Z3rGevr3Ru07', 'Stripe · Watch $79']
+  };
+  if (!STRIPE_ENABLED) return;
+  var links = document.querySelectorAll('a[data-product]');
+  for (var i = 0; i < links.length; i++) {
+    var s = STRIPE_PAY[links[i].getAttribute('data-product')];
+    if (s) {
+      links[i].href = s[0];
+      links[i].textContent = s[1];
+      links[i].removeAttribute('aria-label');
+    }
+  }
+})();
