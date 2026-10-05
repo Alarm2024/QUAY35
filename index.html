@@ -10,61 +10,112 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
 <style>
-:root{--bg:#0b1214;--ink:#e8fbf6;--muted:#9ab3ad;--accent:#2ee6c7;--surface:#121a19;--line:rgba(46,230,199,.22);--serif:"Instrument Serif",Georgia,serif;--sans:"Inter",ui-sans-serif,system-ui,sans-serif}
+:root{--bg:#0b1214;--ink:#e8fbf6;--muted:#9ab3ad;--accent:#2ee6c7;--surface:#121a19;--card:#121a19;--line:rgba(46,230,199,.22);--serif:"Instrument Serif",Georgia,serif;--sans:"Inter",ui-sans-serif,system-ui,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.55;min-height:100vh}
-.wrap{max-width:1080px;margin:0 auto;padding:0 16px 88px}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.6;min-height:100vh;overflow-x:hidden}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px 72px}
 a{color:var(--accent);text-decoration:none}
-/* Links inside running text are underlined, as on elghaly.dev: by colour
-   alone they were too close to the words around them (axe link-in-text-block). */
-p a:not(.btn),li a:not(.btn){text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:currentColor;text-decoration-color:color-mix(in srgb,currentColor 55%,transparent)}
+p a:not(.btn),li a:not(.btn),dd a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:color-mix(in srgb,currentColor 55%,transparent)}
 p a:not(.btn):hover,li a:not(.btn):hover,p a:not(.btn):focus-visible,li a:not(.btn):focus-visible{text-decoration-color:currentColor}
-header{display:flex;align-items:center;gap:8px;position:sticky;top:0;z-index:50;margin:0 -16px 12px;padding:10px 16px;background:rgba(11,18,20,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-.brand{display:flex;align-items:center;gap:8px;text-decoration:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* header */
+header{display:flex;align-items:center;gap:8px;position:sticky;top:0;z-index:50;margin:0 -16px;padding:10px 16px;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:8px;flex:none}
 .qmark{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;font:700 16px var(--sans);color:#04110a;background:linear-gradient(135deg,#7ee8d4,#8a7cff)}
 .grad{font-weight:700;background:linear-gradient(135deg,#e8fff8 0%,#6fe0c4 42%,#9b7dff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
 .mark-35{font-size:24px}
 .mark-quay{font-size:15px;letter-spacing:.22em}
-.header-right{margin-left:auto;display:flex;align-items:center;gap:6px}
-.lang-switch{display:flex;gap:3px}
-.lang-btn{background:transparent;border:1px solid var(--line);color:var(--muted);padding:5px 6px;border-radius:6px;font-size:10px;cursor:pointer}
+.header-right{margin-left:auto;display:flex;align-items:center;gap:6px;min-width:0}
+.lang-switch{display:flex;gap:3px;overflow-x:auto;scrollbar-width:none;min-width:0}
+.lang-switch::-webkit-scrollbar{display:none}
+.lang-btn{flex:none;background:transparent;border:1px solid var(--line);color:var(--muted);padding:5px 6px;border-radius:6px;font-size:10px;cursor:pointer}
 .lang-btn.on{color:var(--ink);border-color:var(--accent)}
-.house{margin:16px 0;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#050508}
-.house img{display:block;width:100%;height:auto}
-.hero{padding:8px 0 6px}
-.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
-h1{font-family:var(--serif);font-size:clamp(34px,6.6vw,54px);font-weight:400;line-height:1.08;margin-bottom:12px}
-.lede,.card p,.who li{color:var(--muted);font-size:14px}
-.park{font-size:14px;color:var(--muted);margin:12px 0 0}
-.hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-.btn{display:inline-block;padding:11px 16px;border-radius:999px;font-size:13px;border:1px solid var(--line);color:var(--ink);background:transparent;cursor:pointer;font-family:var(--sans)}
-.btn.primary{background:var(--accent);color:#04110a;border:0;font-weight:600}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:24px}
-@media(max-width:720px){.grid{grid-template-columns:1fr}}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px}
-.card h2,.card h3{font-family:var(--serif);font-size:22px;font-weight:400;margin:0 0 8px}
-.price{margin:10px 0;color:var(--accent);font-weight:600}
-.grid .btn{margin-top:6px}
-.recourse{font-size:14px;color:var(--muted);margin-top:18px}
-.terms,.where{margin-top:18px;padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--surface)}
-.terms h2,.where h2{font-family:var(--serif);font-size:20px;font-weight:400;margin:0 0 10px}
-.terms p,.where p{font-size:14px;color:var(--muted);margin:0 0 12px}
-.where p:last-child{margin-bottom:0}
-.where-list{margin:12px 0 12px 18px}
-.where-list li{font-size:14px;color:var(--muted);margin:8px 0}
-.who{margin:10px 0 0 18px}
-.who li{margin:6px 0}
-.irreversible{font-size:15px;color:var(--ink);margin:0 0 16px;line-height:1.5}
-.network-warn{font-size:14px;color:var(--ink);margin:0 0 16px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:rgba(46,230,199,.06)}
-.chain{padding:16px 0;border-top:1px solid var(--line)}
-.chain:first-of-type{border-top:0;padding-top:0}
-.chain b{display:block;font-size:11px;letter-spacing:.16em;color:var(--accent);margin-bottom:8px}
-.addr-line{font-size:13px;word-break:break-all;margin-bottom:10px}
+@media(max-width:430px){.mark-quay{display:none}.lang-switch{max-width:118px}}
+/* hero */
+.hero{display:grid;grid-template-columns:1.25fr 1fr;gap:36px;align-items:center;padding:44px 0 28px}
+@media(max-width:820px){.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}}
+.eyebrow,.k{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+h1{font-family:var(--serif);font-size:clamp(38px,6.4vw,62px);font-weight:400;line-height:1.04;margin-bottom:16px;letter-spacing:-.01em}
+.lede{color:var(--muted);font-size:16px;max-width:36em}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:11px 18px;border-radius:999px;font:600 13px var(--sans);border:1px solid var(--line);color:var(--ink);background:transparent;cursor:pointer;min-height:44px}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);color:#04110a;border-color:var(--accent)}
+.btn.primary:hover{filter:brightness(1.08)}
+.art{margin:0;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#050508;aspect-ratio:1168/784}
+.art img{display:block;width:100%;height:100%;object-fit:cover}
+@media(max-width:820px){.art{max-width:520px}}
+/* trust strip */
+.trust{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:8px 0 8px}
+@media(max-width:820px){.trust{grid-template-columns:1fr}}
+.trust li{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:color-mix(in srgb,var(--surface) 70%,transparent);font-size:14px;color:var(--muted)}
+.trust b{display:block;color:var(--ink);font-weight:600;font-size:14px}
+.tick{flex:none;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--accent) 16%,transparent);color:var(--accent);font-size:12px;font-weight:700;margin-top:1px}
+/* sections */
+section{margin-top:64px}
+.sec-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 20px;margin-bottom:20px}
+h2{font-family:var(--serif);font-size:clamp(28px,4vw,38px);font-weight:400;line-height:1.1}
+.sec-note{color:var(--muted);font-size:14px;max-width:34em}
+/* how */
+.steps{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;counter-reset:s}
+@media(max-width:820px){.steps{grid-template-columns:1fr}}
+.steps li{counter-increment:s;padding:20px;border-radius:16px;background:var(--surface);border:1px solid var(--line);color:var(--muted);font-size:14px}
+.steps li::before{content:counter(s,decimal-leading-zero);display:block;font:400 30px var(--serif);color:var(--accent);margin-bottom:6px}
+.steps b{display:block;color:var(--ink);font-size:15px;margin-bottom:4px}
+/* products */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.grid{grid-template-columns:1fr}}
+.card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px}
+.card.feature{border-color:color-mix(in srgb,var(--accent) 60%,transparent);background:linear-gradient(180deg,color-mix(in srgb,var(--accent) 9%,var(--surface)),var(--surface))}
+.badge{align-self:flex-start;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#04110a;background:var(--accent);border-radius:999px;padding:4px 9px;margin-bottom:12px;font-weight:700}
+.card h3{font-family:var(--serif);font-size:25px;font-weight:400;line-height:1.15;margin-bottom:6px}
+.card > p{color:var(--muted);font-size:14px}
+.spec{margin:14px 0 4px;display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:13px}
+.spec dt{color:var(--muted);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding-top:2px}
+.spec dd{color:var(--ink)}
+.buy{margin-top:auto;padding-top:16px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.price{font-weight:700;font-size:20px;color:var(--ink)}
+.price small{font-weight:500;font-size:12px;color:var(--muted)}
+.card.ask{border-style:dashed;background:transparent}
+.recourse{font-size:13px;color:var(--muted);margin-top:16px}
+/* refunds + where */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:820px){.two{grid-template-columns:1fr}}
+.panel{padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--surface)}
+.panel h2{font-size:28px;margin-bottom:12px}
+.panel p,.panel li{font-size:14px;color:var(--muted)}
+.panel p{margin-bottom:10px}
+.panel p:last-child{margin-bottom:0}
+.panel strong{color:var(--ink)}
+.big{font-size:18px !important;color:var(--ink) !important;font-family:var(--serif)}
+.where-list{margin:10px 0 12px 18px}
+.where-list li{margin:8px 0}
+/* wallets */
+details.wallets{margin-top:14px;border:1px solid var(--line);border-radius:18px;background:var(--surface)}
+details.wallets summary{cursor:pointer;list-style:none;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+details.wallets summary::-webkit-details-marker{display:none}
+details.wallets summary h2{font-size:24px}
+details.wallets summary span{font-size:13px;color:var(--muted)}
+details.wallets summary::after{content:"+";font:400 26px var(--serif);color:var(--accent)}
+details.wallets[open] summary::after{content:"–"}
+.wallet-body{padding:0 24px 24px}
+.wallet-body > p{font-size:14px;color:var(--muted);margin-bottom:12px}
+.irreversible{color:var(--ink) !important}
+.network-warn{font-size:14px;color:var(--ink);margin:0 0 16px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:color-mix(in srgb,var(--accent) 6%,transparent)}
+.chains{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(max-width:700px){.chains{grid-template-columns:1fr}}
+.chain{padding:14px;border:1px solid var(--line);border-radius:14px}
+.chain b{display:block;font-size:11px;letter-spacing:.16em;color:var(--accent);margin-bottom:6px}
+.addr-line{font:13px ui-monospace,SFMono-Regular,Menlo,monospace;overflow-wrap:anywhere;word-break:break-all;margin-bottom:10px;color:var(--ink)}
 .row{display:flex;flex-wrap:wrap;gap:8px}
-.k{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
-.pay-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
-footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
-.theme-wrap{position:relative}
+.row .btn{min-height:40px;padding:8px 14px}
+/* footer */
+footer{margin-top:64px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer p{margin:4px 0}
+/* theme picker (themes.js) */
+.theme-wrap{position:relative;flex:none}
 .theme-btn{display:flex;align-items:center;gap:6px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:6px 10px;font:600 11px var(--sans);cursor:pointer}
 .theme-dot{width:10px;height:10px;border-radius:50%;background:#2ee6c7}
 .theme-panel{display:none;position:absolute;right:0;top:calc(100% + 8px);min-width:200px;background:#16181d;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:10px;z-index:80}
@@ -75,7 +126,9 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:v
 .theme-item i{width:14px;height:14px;border-radius:50%;display:block}
 .theme-item .ck{margin-left:auto;opacity:0}
 .theme-item.on .ck{opacity:1}
+@media(max-width:430px){.theme-btn span:not(.theme-dot){display:none}}
 .vh{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
   <meta name="description" content="Desk reports for Solana bots: a weekly landed-vs-failed paper, proof cards, a read-only mint score and RPC watch pings.">
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -98,13 +151,13 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:v
 <body>
 <div class="wrap">
 <header>
-  <a class="brand" href="/">
-    <span class="qmark">Q</span>
+  <a class="brand" href="/" aria-label="QUAY home">
+    <span class="qmark" aria-hidden="true">Q</span>
     <span class="grad mark-35">35</span>
     <span class="grad mark-quay">QUAY</span>
   </a>
   <div class="header-right">
-    <div class="lang-switch" id="langs">
+    <div class="lang-switch" id="langs" aria-label="Language">
       <button class="lang-btn on" data-lang="en">EN</button>
       <button class="lang-btn" data-lang="ar">AR</button>
       <button class="lang-btn" data-lang="ru">RU</button>
@@ -115,60 +168,101 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:v
   </div>
 </header>
 <main id="main">
-<figure class="house"><img width="1168" height="784" src="IMG_6895.jpeg" alt="35 QUAY ElGhaly"/></figure>
-<section class="hero">
-  <p class="eyebrow">35 · QUAY · ElGhaly</p>
-  <h1>Reports a desk can sell. Not another empty chart.</h1>
-  <p class="lede">QUAY is the product door next to Plumb and IRIS. You buy a file, a card, or a watch — not a token. We do not hold keys.</p>
-  <div class="hero-meta">
-    <a class="btn" href="mailto:support@elghaly.dev">support@elghaly.dev</a>
+<div class="hero">
+  <div>
+    <p class="eyebrow">35 · QUAY · ElGhaly</p>
+    <h1>Reports a desk can sell. Not another empty chart.</h1>
+    <p class="lede">QUAY works from public data and the text you send — signatures, a mint, a feed — and sends back a page, a card or a ping. You buy a file, a card or a watch, not a token. We never hold keys.</p>
+    <div class="cta">
+      <a class="btn primary" href="#products">See the five products</a>
+      <a class="btn" href="/quay/fees.html">Start with the $199 fee review</a>
+    </div>
   </div>
-</section>
-<div class="grid">
-  <article class="card"><h2>QUAY Land</h2><p>Weekly paper for one bot: landed vs failed and tip waste. You send hashes. You keep the wallet.</p><div class="price">$149 / month</div><a class="btn primary" href="https://quay-shop.elghaly.dev/products/quay-land" data-product="quay-land" aria-label="Buy — pay with PayPal: QUAY Land, $149 / month">Buy — pay with PayPal</a></article>
-  <article class="card"><h2>Flex card pack</h2><p>Desk proof cards in the 35 lockup. Text you send. No fake PnL from us.</p><div class="price">$29 one-time</div><a class="btn primary" href="https://quay-shop.elghaly.dev/products/flex-card-pack" data-product="flex-card-pack" aria-label="Buy — pay with PayPal: Flex card pack, $29 one-time">Buy — pay with PayPal</a></article>
-  <article class="card"><h2>Score report</h2><p>Read-only mint note. Not a sell bot.</p><div class="price">$49 one-time</div><a class="btn primary" href="https://quay-shop.elghaly.dev/products/score-report" data-product="score-report" aria-label="Buy — pay with PayPal: Score report, $49 one-time">Buy — pay with PayPal</a></article>
-  <article class="card"><h2>Node Watch</h2><p>Telegram ping when an RPC or gRPC feed goes quiet.</p><div class="price">$79 / month</div><a class="btn primary" href="https://quay-shop.elghaly.dev/products/node-watch" data-product="node-watch" aria-label="Buy — pay with PayPal: Node Watch, $79 / month">Buy — pay with PayPal</a></article>
+  <figure class="art"><img width="1168" height="784" src="IMG_6895.jpeg" alt="35 QUAY ElGhaly"/></figure>
 </div>
-<p class="recourse">Payments through the shop checkout can be disputed through PayPal or your card issuer. A wallet transfer cannot. Same product, different recourse.</p>
-<section class="terms">
-  <h2>Terms</h2>
-  <p>Same prices as the shop. Send the product amount, then mail the hash to <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>.</p>
+<ul class="trust">
+  <li><span class="tick" aria-hidden="true">✓</span><span><b>Public data in</b>No keys, no seed phrase, no wallet access. Ever.</span></li>
+  <li><span class="tick" aria-hidden="true">✓</span><span><b>Refund any time</b>No form, no reason, no time limit. <a href="#refunds">How</a></span></li>
+  <li><span class="tick" aria-hidden="true">✓</span><span><b>A real company</b>elghaly, LLC · 548 Market St, San Francisco. <a href="#where">Where we are</a></span></li>
+</ul>
+
+<section id="how" aria-labelledby="how-h">
+  <div class="sec-head"><h2 id="how-h">How it works</h2><p class="sec-note">Everything we read is already public on chain or in a block explorer.</p></div>
+  <ol class="steps">
+    <li><b>You send public data</b>Signatures, a mint address, the feed to watch, or the text for your cards. Never a key or an RPC URL with a token in it.</li>
+    <li><b>We read it</b>Against what actually landed on chain. If something cannot be read from public data, we say UNKNOWN instead of guessing.</li>
+    <li><b>You get a file, a card or a ping</b>By email or Telegram. Nothing of ours touches your config, your wallet or your transactions.</li>
+  </ol>
 </section>
-<section class="where" id="where">
-  <h2>Where we are</h2>
-  <p><strong>Mail ·</strong> elghaly, LLC, 548 Market St, San Francisco, CA 94104, United States. Post reaches us there.</p>
-  <p>QUAY is a remote desk. Support is by email, and the handover call is scheduled to your timezone, not ours. There is no counter to walk into, so hold us to the things you can actually test instead:</p>
-  <ul class="where-list">
-    <li>The four wallet addresses below each link to a public explorer. Open them and read the history before you send anything — that is a check you can run without us.</li>
-    <li>Refunds are unconditional. Ask and the money goes back. That is the cheapest way to find out whether we keep our word.</li>
-    <li>Start small. <a href="/quay/fees.html">$199 buys a written fee review</a> with nothing of yours at risk — no keys, no wallet, no access to anything. If we are not who we say we are, you find out for $199 and a reply. Cheaper still: the $29 Flex card pack above.</li>
-  </ul>
-  <p>We are a small remote operation, not a large supplier with a legal department behind it. If that matters for your purchase, ask before you pay and we will tell you plainly what we can and cannot commit to. Otherwise: start with the smallest thing.</p>
-</section>
-<section class="terms" id="refunds">
-  <h2>Refunds</h2>
-  <p>If you want your money back, you get it.</p>
-  <p>No form, no reason, no time limit, no exceptions. Mail <a href="mailto:35@elghaly.dev">35@elghaly.dev</a> and say you want a refund.</p>
-  <p>This covers everything QUAY sells — the fee review, Land reports, proof cards, Node Watch. Before we start, after we deliver, either way.</p>
-  <p><strong>Paid through the shop checkout</strong> — back to the same card or PayPal account, 5–10 business days.</p>
-  <p><strong>Wallet</strong> — back to the address it came from, same asset, same network, within 3 business days, minus the network fee. Send from an address you control; we cannot refund an exchange deposit address.</p>
-  <p>We would rather return money than keep money someone does not want us to have.</p>
-  <p><a href="#where">Where we are</a></p>
-</section>
-<section class="card" id="wallets" style="margin-top:18px">
-  <p class="k">Wallet send</p>
-  <h3>Withdraw from your wallet to the desk</h3>
-  <p>Same prices as the shop. Send the product amount, then mail the hash to <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>.</p>
-  <p class="irreversible">A wallet transfer cannot be reversed. There is no chargeback. Read what you are buying before you send.</p>
-  <p class="network-warn">ETH and Base use the same address format. Sending on the wrong network loses the funds and cannot be recovered.</p>
-  <div class="chain"><div class="addr-line"><b>SOL · Solana</b> — 4vsXfhPXgwmP2cDdypGf9QrmdpMUhxCxRJ5aDDPxfsYo</div><div class="row"><button class="btn" type="button" data-copy="4vsXfhPXgwmP2cDdypGf9QrmdpMUhxCxRJ5aDDPxfsYo" data-label="Copy SOL">Copy SOL</button><a class="btn" href="https://solscan.io/account/4vsXfhPXgwmP2cDdypGf9QrmdpMUhxCxRJ5aDDPxfsYo" target="_blank" rel="noopener">Solscan</a></div></div>
-  <div class="chain"><div class="addr-line"><b>ETH · Ethereum</b> — 0x379F62A4EFFDAE688c5963B44667501f481CFE6D</div><div class="row"><button class="btn" type="button" data-copy="0x379F62A4EFFDAE688c5963B44667501f481CFE6D" data-label="Copy ETH">Copy ETH</button><a class="btn" href="https://etherscan.io/address/0x379F62A4EFFDAE688c5963B44667501f481CFE6D" target="_blank" rel="noopener">Etherscan</a></div></div>
-  <div class="chain"><div class="addr-line"><b>BTC · Bitcoin</b> — bc1qgtc26k0vuu8j3uhpvpsevgladug5n6en4jzm00</div><div class="row"><button class="btn" type="button" data-copy="bc1qgtc26k0vuu8j3uhpvpsevgladug5n6en4jzm00" data-label="Copy BTC">Copy BTC</button><a class="btn" href="https://mempool.space/address/bc1qgtc26k0vuu8j3uhpvpsevgladug5n6en4jzm00" target="_blank" rel="noopener">Mempool</a></div></div>
-  <div class="chain"><div class="addr-line"><b>BASE · Base</b> — 0x379F62A4EFFDAE688c5963B44667501f481CFE6D</div><div class="row"><button class="btn" type="button" data-copy="0x379F62A4EFFDAE688c5963B44667501f481CFE6D" data-label="Copy Base">Copy Base</button><a class="btn" href="https://basescan.org/address/0x379F62A4EFFDAE688c5963B44667501f481CFE6D" target="_blank" rel="noopener">Basescan</a></div></div>
-  <div class="pay-actions">
-    <a class="btn primary" href="#wallets">Pay from wallet</a>
+
+<section id="products" aria-labelledby="products-h">
+  <div class="sec-head"><h2 id="products-h">Products</h2><p class="sec-note">Pay through the shop checkout with PayPal, or from a wallet below.</p></div>
+  <div class="grid">
+    <article class="card feature"><span class="badge">Start here</span><h3>Fee review</h3><p>Your priority-fee and tip settings, read against what your public transactions actually paid and landed at.</p>
+      <dl class="spec"><dt>You send</dt><dd>Up to 200 transaction signatures and your current settings. Nothing private.</dd><dt>You get</dt><dd>One written page: the percentile you land at, the one to target, where you overpay. Gaps say UNKNOWN.</dd><dt>When</dt><dd>Within 48 hours of a complete brief.</dd></dl>
+      <div class="buy"><div class="price">$199 <small>once</small></div><a class="btn primary" href="/quay/fees.html">Details &amp; brief</a></div>
+    </article>
+    <article class="card"><h3>QUAY Land</h3><p>Weekly paper for one bot: landed vs failed, and where tips are wasted.</p>
+      <dl class="spec"><dt>You send</dt><dd>Transaction hashes. You keep the wallet.</dd><dt>You get</dt><dd>A written report every week, by email.</dd><dt>When</dt><dd>Confirmed in reply to your order.</dd></dl>
+      <div class="buy"><div class="price">$149 <small>/ month</small></div><a class="btn primary" href="https://quay-shop.elghaly.dev/products/quay-land" data-product="quay-land" aria-label="Buy — pay with PayPal: QUAY Land, $149 / month">Buy — pay with PayPal</a></div>
+    </article>
+    <article class="card"><h3>Node Watch</h3><p>A Telegram ping when an RPC or gRPC feed goes quiet.</p>
+      <dl class="spec"><dt>You send</dt><dd>Which feed to watch.</dd><dt>You get</dt><dd>Alerts in Telegram.</dd><dt>When</dt><dd>Once you have sent us the feed.</dd></dl>
+      <div class="buy"><div class="price">$79 <small>/ month</small></div><a class="btn primary" href="https://quay-shop.elghaly.dev/products/node-watch" data-product="node-watch" aria-label="Buy — pay with PayPal: Node Watch, $79 / month">Buy — pay with PayPal</a></div>
+    </article>
+    <article class="card"><h3>Score report</h3><p>A read-only note on one mint. Not a sell bot, not advice.</p>
+      <dl class="spec"><dt>You send</dt><dd>The mint address.</dd><dt>You get</dt><dd>A written note by email.</dd><dt>When</dt><dd>Confirmed in reply to your order.</dd></dl>
+      <div class="buy"><div class="price">$49 <small>one-time</small></div><a class="btn primary" href="https://quay-shop.elghaly.dev/products/score-report" data-product="score-report" aria-label="Buy — pay with PayPal: Score report, $49 one-time">Buy — pay with PayPal</a></div>
+    </article>
+    <article class="card"><h3>Flex card pack</h3><p>Desk proof cards in the 35 lockup, made from text you send. No made-up numbers from us.</p>
+      <dl class="spec"><dt>You send</dt><dd>The text for your cards.</dd><dt>You get</dt><dd>Image cards by email.</dd><dt>When</dt><dd>Confirmed in reply to your order.</dd></dl>
+      <div class="buy"><div class="price">$29 <small>one-time</small></div><a class="btn primary" href="https://quay-shop.elghaly.dev/products/flex-card-pack" data-product="flex-card-pack" aria-label="Buy — pay with PayPal: Flex card pack, $29 one-time">Buy — pay with PayPal</a></div>
+    </article>
+    <article class="card ask"><h3>Not sure which one?</h3><p>Mail <a href="mailto:support@elghaly.dev">support@elghaly.dev</a> with what you run. We answer with the smallest product that fits — or tell you plainly that none does.</p>
+      <div class="buy"><a class="btn" href="mailto:support@elghaly.dev?subject=QUAY%20%E2%80%94%20which%20product%3F">Ask first</a></div>
+    </article>
   </div>
+  <p class="recourse">Payments through the shop checkout can be disputed through PayPal or your card issuer. A wallet transfer cannot. Same product, different recourse.</p>
+</section>
+
+<section aria-label="Refunds and where we are">
+  <div class="two">
+    <div class="panel" id="refunds">
+      <h2>Refunds</h2>
+      <p class="big">If you want your money back, you get it.</p>
+      <p>No form, no reason, no time limit, no exceptions. Mail <a href="mailto:35@elghaly.dev">35@elghaly.dev</a> and say you want a refund.</p>
+      <p>This covers everything QUAY sells — the fee review, Land reports, proof cards, Node Watch. Before we start, after we deliver, either way.</p>
+      <p><strong>Paid through the shop checkout</strong> — back to the same card or PayPal account, 5–10 business days.</p>
+      <p><strong>Wallet</strong> — back to the address it came from, same asset, same network, within 3 business days, minus the network fee. Send from an address you control; we cannot refund an exchange deposit address.</p>
+      <p>We would rather return money than keep money someone does not want us to have.</p>
+    </div>
+    <div class="panel" id="where">
+      <h2>Where we are</h2>
+      <p><strong>Mail ·</strong> elghaly, LLC, 548 Market St, San Francisco, CA 94104, United States. Post reaches us there.</p>
+      <p>QUAY is a remote desk. Support is by email, and the handover call is scheduled to your timezone, not ours. There is no counter to walk into, so hold us to the things you can actually test instead:</p>
+      <ul class="where-list">
+        <li>The four wallet addresses below each link to a public explorer. Open them and read the history before you send anything — that is a check you can run without us.</li>
+        <li>Refunds are unconditional. Ask and the money goes back. That is the cheapest way to find out whether we keep our word.</li>
+        <li>Start small. <a href="/quay/fees.html">$199 buys a written fee review</a> with nothing of yours at risk — no keys, no wallet, no access to anything. Cheaper still: the $29 Flex card pack.</li>
+      </ul>
+      <p>We are a small remote operation, not a large supplier with a legal department behind it. If that matters for your purchase, ask before you pay and we will tell you plainly what we can and cannot commit to.</p>
+    </div>
+  </div>
+
+  <details class="wallets" id="wallets">
+    <summary><span><span class="k" style="display:block;margin:0 0 4px">Wallet send</span><h2>Pay from your wallet</h2></span></summary>
+    <div class="wallet-body">
+      <p>Same prices as the shop. Send the product amount, then mail the hash to <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>.</p>
+      <p class="irreversible">A wallet transfer cannot be reversed. There is no chargeback. Read what you are buying before you send.</p>
+      <p class="network-warn">ETH and Base use the same address format. Sending on the wrong network loses the funds and cannot be recovered.</p>
+      <div class="chains">
+        <div class="chain"><b>SOL · Solana</b><div class="addr-line">4vsXfhPXgwmP2cDdypGf9QrmdpMUhxCxRJ5aDDPxfsYo</div><div class="row"><button class="btn" type="button" data-copy="4vsXfhPXgwmP2cDdypGf9QrmdpMUhxCxRJ5aDDPxfsYo" data-label="Copy SOL">Copy SOL</button><a class="btn" href="https://solscan.io/account/4vsXfhPXgwmP2cDdypGf9QrmdpMUhxCxRJ5aDDPxfsYo" target="_blank" rel="noopener">Solscan</a></div></div>
+        <div class="chain"><b>ETH · Ethereum</b><div class="addr-line">0x379F62A4EFFDAE688c5963B44667501f481CFE6D</div><div class="row"><button class="btn" type="button" data-copy="0x379F62A4EFFDAE688c5963B44667501f481CFE6D" data-label="Copy ETH">Copy ETH</button><a class="btn" href="https://etherscan.io/address/0x379F62A4EFFDAE688c5963B44667501f481CFE6D" target="_blank" rel="noopener">Etherscan</a></div></div>
+        <div class="chain"><b>BTC · Bitcoin</b><div class="addr-line">bc1qgtc26k0vuu8j3uhpvpsevgladug5n6en4jzm00</div><div class="row"><button class="btn" type="button" data-copy="bc1qgtc26k0vuu8j3uhpvpsevgladug5n6en4jzm00" data-label="Copy BTC">Copy BTC</button><a class="btn" href="https://mempool.space/address/bc1qgtc26k0vuu8j3uhpvpsevgladug5n6en4jzm00" target="_blank" rel="noopener">Mempool</a></div></div>
+        <div class="chain"><b>BASE · Base</b><div class="addr-line">0x379F62A4EFFDAE688c5963B44667501f481CFE6D</div><div class="row"><button class="btn" type="button" data-copy="0x379F62A4EFFDAE688c5963B44667501f481CFE6D" data-label="Copy Base">Copy Base</button><a class="btn" href="https://basescan.org/address/0x379F62A4EFFDAE688c5963B44667501f481CFE6D" target="_blank" rel="noopener">Basescan</a></div></div>
+      </div>
+    </div>
+  </details>
 </section>
 </main>
 <footer>
@@ -186,11 +280,15 @@ document.addEventListener('click',function(e){
   var lab=b.getAttribute('data-label'); b.textContent='Copied';
   setTimeout(function(){b.textContent=lab;},900);
 });
+// A link to #wallets opens the collapsed wallet panel.
+function openWallets(){ if(location.hash==='#wallets'){ var d=document.getElementById('wallets'); if(d) d.open=true; } }
+window.addEventListener('hashchange',openWallets); openWallets();
 (function(){
   var map={en:{h:'Reports a desk can sell. Not another empty chart.',l:'You buy a file, a card, or a watch — not a token.'},ar:{h:'تقارير للمكتب.',l:'ملف أو كارت. مش توكن.'},ru:{h:'Отчёты для стола.',l:'Файл или карта. Не токен.'},zh:{h:'能卖的报告.',l:'文件或卡，不是代币。'},de:{h:'Reports für den Desk.',l:'Datei oder Karte. Kein Token.'},es:{h:'Informes para el desk.',l:'Archivo o tarjeta. No un token.'}};
+  var en={h:document.querySelector('h1').textContent,l:document.querySelector('.lede').textContent};
   document.getElementById('langs').addEventListener('click',function(e){
     var b=e.target.closest('[data-lang]'); if(!b) return;
-    var k=b.getAttribute('data-lang'); var t=map[k]; if(!t) return;
+    var k=b.getAttribute('data-lang'); var t=k==='en'?en:map[k]; if(!t) return;
     document.querySelectorAll('.lang-btn').forEach(function(x){x.classList.toggle('on',x===b);});
     document.querySelector('h1').textContent=t.h;
     document.querySelector('.lede').textContent=t.l;
