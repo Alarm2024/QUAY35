@@ -72,6 +72,7 @@ h2{font-family:var(--serif);font-size:22px;font-weight:400;margin:0 0 12px}
 .btn{display:inline-block;padding:11px 16px;border-radius:999px;font-size:13px;border:1px solid var(--line);color:var(--ink);background:transparent;cursor:pointer;font-family:var(--sans);text-decoration:none}
 .btn.primary{background:var(--accent);color:#04110a;border:0;font-weight:600}
 .btn:hover{opacity:.92}
+.pay-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
 footer p{margin:6px 0}
 </style>
@@ -186,9 +187,12 @@ footer p{margin:6px 0}
 <section class="price-block">
   <h2>Price and intake</h2>
   <p class="price">$199</p>
-  <p class="price-note">Once · English only · Invoice on reply</p>
-  <p>Email a complete brief to start. No form on this page collects anything. Payment is invoiced after we confirm your brief — not through a checkout button here.</p>
-  <a class="btn primary" href="mailto:35@elghaly.dev?subject=QUAY%20fee%20review&amp;body=QUAY%20fee%20review%20%E2%80%94%20complete%20brief%0A%0A1.%20Transaction%20signatures%20(up%20to%20200%2C%20signatures%20only%3A%20no%20keys%2C%20no%20seed%20phrases%2C%20no%20RPC%20URLs%20with%20tokens)%0A%0A%5Bpaste%20signatures%20or%20explorer%20links%5D%0A%0A2.%20Current%20priority-fee%20setting%3A%0A%0A3.%20Current%20tip%20setting%3A%0A%0A4.%20Venue%20or%20aggregator%20you%20route%20through%3A%0A">Send brief — 35@elghaly.dev</a>
+  <p class="price-note">Once · English only · PayPal or invoice on reply</p>
+  <p>Pay with PayPal here and send your brief with the PayPal transaction ID, or send the brief first and pay on the invoice we send when we confirm it. No form on this page collects anything.</p>
+  <div class="pay-row">
+    <a class="btn primary" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=1918825752%40qq.com&amp;item_name=QUAY%20Fee%20review&amp;item_number=fee-review&amp;amount=199.00&amp;currency_code=USD&amp;no_shipping=1&amp;return=https%3A%2F%2Fquay-35.elghaly.dev%2Fquay%2Fthanks.html&amp;cancel_return=https%3A%2F%2Fquay-35.elghaly.dev%2Fquay%2Ffees.html" aria-label="Pay with PayPal: Fee review, $199 once">Pay with PayPal</a>
+    <a class="btn" href="mailto:35@elghaly.dev?subject=QUAY%20fee%20review&amp;body=QUAY%20fee%20review%20%E2%80%94%20complete%20brief%0A%0A1.%20Transaction%20signatures%20(up%20to%20200%2C%20signatures%20only%3A%20no%20keys%2C%20no%20seed%20phrases%2C%20no%20RPC%20URLs%20with%20tokens)%0A%0A%5Bpaste%20signatures%20or%20explorer%20links%5D%0A%0A2.%20Current%20priority-fee%20setting%3A%0A%0A3.%20Current%20tip%20setting%3A%0A%0A4.%20Venue%20or%20aggregator%20you%20route%20through%3A%0A">Send brief — 35@elghaly.dev</a>
+  </div>
   <p class="disclaimer">This is a written recommendation based on public chain data. We do not touch your config, your wallet, or your transactions. Following the recommendation may not improve your landing rate or lower your cost, and we do not promise that it will. We make no claim about earnings, returns or savings.</p>
 </section>
 
@@ -197,7 +201,7 @@ footer p{margin:6px 0}
   <p>If you want your money back, you get it.</p>
   <p>No form, no reason, no time limit, no exceptions. Mail <a href="mailto:35@elghaly.dev">35@elghaly.dev</a> and say you want a refund.</p>
   <p>This covers everything QUAY sells — the fee review, Land reports, proof cards, Node Watch. Before we start, after we deliver, either way.</p>
-  <p><strong>Paid through the shop checkout</strong> — back to the same card or PayPal account, 5–10 business days.</p>
+  <p><strong>Paid with PayPal here, or through the shop checkout</strong> — back to the same card or PayPal account, 5–10 business days. A PayPal payment can also be disputed through PayPal.</p>
   <p><strong>Wallet</strong> — back to the address it came from, same asset, same network, within 3 business days, minus the network fee. Send from an address you control; we cannot refund an exchange deposit address.</p>
   <p>We would rather return money than keep money someone does not want us to have.</p>
   <p><a href="../index.html#where">Where we are</a></p>

@@ -1,6 +1,6 @@
-/* QUAY checkout. The product buttons go to the PayPal shop (quay-shop.elghaly.dev).
-   Stripe stays wired but switched off: set STRIPE_ENABLED to true to send the
-   buttons back to these Stripe links. */
+/* QUAY checkout. The product buttons pay with PayPal directly; each href is in
+   index.html so it works without JavaScript. Stripe stays wired but switched
+   off, and even when on it never replaces a PayPal link. */
 (function () {
   'use strict';
   var STRIPE_ENABLED = false;
@@ -13,6 +13,7 @@
   if (!STRIPE_ENABLED) return;
   var links = document.querySelectorAll('a[data-product]');
   for (var i = 0; i < links.length; i++) {
+    if (/^https:\/\/www\.paypal\.com\//.test(links[i].getAttribute('href') || '')) continue;
     var s = STRIPE_PAY[links[i].getAttribute('data-product')];
     if (s) {
       links[i].href = s[0];
