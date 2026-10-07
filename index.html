@@ -80,6 +80,8 @@ h2{font-family:var(--serif);font-size:clamp(28px,4vw,38px);font-weight:400;line-
 .price small{font-weight:500;font-size:12px;color:var(--muted)}
 .card.ask{border-style:dashed;background:transparent}
 .recourse{font-size:13px;color:var(--muted);margin-top:16px}
+.buy .alt{flex-basis:100%;text-align:right;font-size:12px;line-height:1.4;color:var(--muted);text-decoration:underline;text-underline-offset:3px}
+.buy .alt:hover,.buy .alt:focus-visible{color:var(--ink)}
 /* refunds + where */
 .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 @media(max-width:820px){.two{grid-template-columns:1fr}}
@@ -198,7 +200,7 @@ footer p{margin:4px 0}
 </section>
 
 <section id="products" aria-labelledby="products-h">
-  <div class="sec-head"><h2 id="products-h">Products</h2><p class="sec-note">Pay through the shop checkout with PayPal, or from a wallet below.</p></div>
+  <div class="sec-head"><h2 id="products-h">Products</h2><p class="sec-note">Pay with PayPal here, use the shop checkout, or pay from a wallet below.</p></div>
   <div class="grid">
     <article class="card feature"><span class="badge">Start here</span><h3>Fee review</h3><p>Your priority-fee and tip settings, read against what your public transactions actually paid and landed at.</p>
       <dl class="spec"><dt>You send</dt><dd>Up to 200 transaction signatures and your current settings. Nothing private.</dd><dt>You get</dt><dd>One written page: the percentile you land at, the one to target, where you overpay. Gaps say UNKNOWN.</dd><dt>When</dt><dd>Within 48 hours of a complete brief.</dd></dl>
@@ -206,25 +208,25 @@ footer p{margin:4px 0}
     </article>
     <article class="card"><h3>QUAY Land</h3><p>Weekly paper for one bot: landed vs failed, and where tips are wasted.</p>
       <dl class="spec"><dt>You send</dt><dd>Transaction hashes. You keep the wallet.</dd><dt>You get</dt><dd>A written report every week, by email.</dd><dt>When</dt><dd>Confirmed in reply to your order.</dd></dl>
-      <div class="buy"><div class="price">$149 <small>/ month</small></div><a class="btn primary" href="https://quay-shop.elghaly.dev/products/quay-land" data-product="quay-land" aria-label="Buy — pay with PayPal: QUAY Land, $149 / month">Buy — pay with PayPal</a></div>
+      <div class="buy"><div class="price">$149 <small>/ month</small></div><a class="btn primary" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick-subscriptions&amp;business=1918825752%40qq.com&amp;item_name=QUAY%20Land&amp;item_number=quay-land&amp;a3=149.00&amp;p3=1&amp;t3=M&amp;src=1&amp;sra=1&amp;currency_code=USD&amp;no_shipping=1&amp;return=https%3A%2F%2Fquay-35.elghaly.dev%2Fquay%2Fthanks.html&amp;cancel_return=https%3A%2F%2Fquay-35.elghaly.dev%2F%23products" data-product="quay-land" aria-label="Pay with PayPal: QUAY Land, $149 / month">Pay with PayPal</a><a class="alt" href="https://quay-shop.elghaly.dev/products/quay-land">or use the shop checkout</a></div>
     </article>
     <article class="card"><h3>Node Watch</h3><p>A Telegram ping when an RPC or gRPC feed goes quiet.</p>
       <dl class="spec"><dt>You send</dt><dd>Which feed to watch.</dd><dt>You get</dt><dd>Alerts in Telegram.</dd><dt>When</dt><dd>Once you have sent us the feed.</dd></dl>
-      <div class="buy"><div class="price">$79 <small>/ month</small></div><a class="btn primary" href="https://quay-shop.elghaly.dev/products/node-watch" data-product="node-watch" aria-label="Buy — pay with PayPal: Node Watch, $79 / month">Buy — pay with PayPal</a></div>
+      <div class="buy"><div class="price">$79 <small>/ month</small></div><a class="btn primary" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick-subscriptions&amp;business=1918825752%40qq.com&amp;item_name=Node%20Watch&amp;item_number=node-watch&amp;a3=79.00&amp;p3=1&amp;t3=M&amp;src=1&amp;sra=1&amp;currency_code=USD&amp;no_shipping=1&amp;return=https%3A%2F%2Fquay-35.elghaly.dev%2Fquay%2Fthanks.html&amp;cancel_return=https%3A%2F%2Fquay-35.elghaly.dev%2F%23products" data-product="node-watch" aria-label="Pay with PayPal: Node Watch, $79 / month">Pay with PayPal</a><a class="alt" href="https://quay-shop.elghaly.dev/products/node-watch">or use the shop checkout</a></div>
     </article>
     <article class="card"><h3>Score report</h3><p>A read-only note on one mint. Not a sell bot, not advice.</p>
       <dl class="spec"><dt>You send</dt><dd>The mint address.</dd><dt>You get</dt><dd>A written note by email.</dd><dt>When</dt><dd>Confirmed in reply to your order.</dd></dl>
-      <div class="buy"><div class="price">$49 <small>one-time</small></div><a class="btn primary" href="https://quay-shop.elghaly.dev/products/score-report" data-product="score-report" aria-label="Buy — pay with PayPal: Score report, $49 one-time">Buy — pay with PayPal</a></div>
+      <div class="buy"><div class="price">$49 <small>one-time</small></div><a class="btn primary" href="https://www.paypal.com/ncp/payment/TA9ZAXCAGNUYY" data-product="score-report" aria-label="Pay with PayPal: Score report, $49 one-time">Pay with PayPal</a><a class="alt" href="https://quay-shop.elghaly.dev/products/score-report">or use the shop checkout</a></div>
     </article>
     <article class="card"><h3>Flex card pack</h3><p>Desk proof cards in the 35 lockup, made from text you send. No made-up numbers from us.</p>
       <dl class="spec"><dt>You send</dt><dd>The text for your cards.</dd><dt>You get</dt><dd>Image cards by email.</dd><dt>When</dt><dd>Confirmed in reply to your order.</dd></dl>
-      <div class="buy"><div class="price">$29 <small>one-time</small></div><a class="btn primary" href="https://quay-shop.elghaly.dev/products/flex-card-pack" data-product="flex-card-pack" aria-label="Buy — pay with PayPal: Flex card pack, $29 one-time">Buy — pay with PayPal</a></div>
+      <div class="buy"><div class="price">$29 <small>one-time</small></div><a class="btn primary" href="https://www.paypal.com/ncp/payment/DDNVRBHA4952N" data-product="flex-card-pack" aria-label="Pay with PayPal: Flex card pack, $29 one-time">Pay with PayPal</a><a class="alt" href="https://quay-shop.elghaly.dev/products/flex-card-pack">or use the shop checkout</a></div>
     </article>
     <article class="card ask"><h3>Not sure which one?</h3><p>Mail <a href="mailto:support@elghaly.dev">support@elghaly.dev</a> with what you run. We answer with the smallest product that fits — or tell you plainly that none does.</p>
       <div class="buy"><a class="btn" href="mailto:support@elghaly.dev?subject=QUAY%20%E2%80%94%20which%20product%3F">Ask first</a></div>
     </article>
   </div>
-  <p class="recourse">Payments through the shop checkout can be disputed through PayPal or your card issuer. A wallet transfer cannot. Same product, different recourse.</p>
+  <p class="recourse">A PayPal payment, here or through the shop checkout, can be disputed through PayPal; a card payment through the shop, through your card issuer. A wallet transfer cannot. Same product, different recourse.</p>
 </section>
 
 <section aria-label="Refunds and where we are">
@@ -232,9 +234,9 @@ footer p{margin:4px 0}
     <div class="panel" id="refunds">
       <h2>Refunds</h2>
       <p class="big">If you want your money back, you get it.</p>
-      <p>No form, no reason, no time limit, no exceptions. Mail <a href="mailto:35@elghaly.dev">35@elghaly.dev</a> and say you want a refund.</p>
+      <p>No form, no reason, no time limit, no exceptions. Mail <a href="mailto:support@elghaly.dev">support@elghaly.dev</a> and say you want a refund.</p>
       <p>This covers everything QUAY sells — the fee review, Land reports, proof cards, Node Watch. Before we start, after we deliver, either way.</p>
-      <p><strong>Paid through the shop checkout</strong> — back to the same card or PayPal account, 5–10 business days.</p>
+      <p><strong>Paid with PayPal here, or through the shop checkout</strong> — back to the same card or PayPal account, 5–10 business days. A PayPal payment can also be disputed through PayPal.</p>
       <p><strong>Wallet</strong> — back to the address it came from, same asset, same network, within 3 business days, minus the network fee. Send from an address you control; we cannot refund an exchange deposit address.</p>
       <p>We would rather return money than keep money someone does not want us to have.</p>
     </div>
