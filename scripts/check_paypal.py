@@ -1,9 +1,11 @@
 """Check the PayPal Payments Standard links on this site.
 
-Parses the HTML (stdlib only) and fails when a PayPal link pays the wrong
-account, the wrong amount or currency, uses the wrong cmd for a one-time or
-monthly item, sends the buyer back to another site, or disagrees with the
-price printed on its own card.
+Parses the HTML (stdlib only). A locked-price PayPal Payment Link
+(paypal.com/ncp/payment/...) must be one listed in LOCKED, on the card whose
+price matches that product. A plain Payments Standard link (cgi-bin/webscr)
+fails when it pays the wrong account, the wrong amount or currency, uses the
+wrong cmd for a one-time or monthly item, sends the buyer back to another
+site, or disagrees with the price printed on its own card.
 
     python3 scripts/check_paypal.py
 """
@@ -74,7 +76,8 @@ def shown_price(card):
     return None, ""
 
 
-def check(site, expected, pages):
+def check(site, expected, pages, locked=None):
+    locked = locked or {}
     host = urlsplit(site).hostname
     errors, seen = [], {}
     for rel in pages:
@@ -90,6 +93,20 @@ def check(site, expected, pages):
                 errors.append("%s: %s" % (where, msg))
 
             u = urlsplit(href)
+            if u.path.startswith("/ncp/payment/"):
+                sku = locked.get(href)
+                if u.scheme != "https" or u.hostname != "www.paypal.com" or sku is None:
+                    bad("Payment Link not in LOCKED: " + href)
+                    continue
+                seen[sku] = seen.get(sku, 0) + 1
+                amount, cycle = expected[sku]
+                card = card_of(a)
+                price, text = shown_price(card) if card else (None, "")
+                if price != amount:
+                    bad("card shows %r but %s is locked at %s" % (text.strip(), sku, amount))
+                if "month" in text or cycle != "once":
+                    bad("Payment Links here are one-time; %s is %s" % (sku, cycle))
+                continue
             if u.scheme != "https" or u.hostname != "www.paypal.com" or u.path != "/cgi-bin/webscr":
                 bad("not a PayPal Payments Standard URL: " + href)
                 continue
@@ -148,7 +165,13 @@ EXPECTED = {
     "flex-card-pack": ("29.00", "once"),
     "fee-review": ("199.00", "once"),
 }
+# Locked-price PayPal Payment Links: URL -> sku. The amount is fixed in PayPal.
+LOCKED = {
+    "https://www.paypal.com/ncp/payment/B27KHRX83CNP6": "fee-review",
+    "https://www.paypal.com/ncp/payment/TA9ZAXCAGNUYY": "score-report",
+    "https://www.paypal.com/ncp/payment/DDNVRBHA4952N": "flex-card-pack",
+}
 PAGES = ["index.html", "quay/fees.html"]
 
 if __name__ == "__main__":
-    check(SITE, EXPECTED, PAGES)
+    check(SITE, EXPECTED, PAGES, LOCKED)
